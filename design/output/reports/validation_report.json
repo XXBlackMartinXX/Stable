@@ -1,0 +1,163 @@
+{
+  "site": {
+    "width_m": 40.0,
+    "depth_m": 50.0,
+    "area_m2": 2000.0
+  },
+  "totals": {
+    "space_count": 40,
+    "total_scheduled_area_m2": 1647.01,
+    "x_dimension_chain_sum_m": 40.0,
+    "y_dimension_chain_sum_m": 50.0
+  },
+  "passed_checks": [
+    {
+      "check": "Site width == 40.00 m",
+      "detail": "SITE_WIDTH=40.0"
+    },
+    {
+      "check": "Site depth == 50.00 m",
+      "detail": "SITE_DEPTH=50.0"
+    },
+    {
+      "check": "All spaces fit inside site boundary",
+      "detail": "out_of_bounds=[]"
+    },
+    {
+      "check": "No overlapping spaces (parking-within-motor-court exempted)",
+      "detail": "overlaps=[]"
+    },
+    {
+      "check": "Exactly 20 standard horse stalls",
+      "detail": "count=20"
+    },
+    {
+      "check": "Exactly 2 premium horse stalls",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 2 special horse rooms (label unresolved, flagged)",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 2 paddocks",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 1 feed room",
+      "detail": "count=1"
+    },
+    {
+      "check": "Exactly 1 service room",
+      "detail": "count=1"
+    },
+    {
+      "check": "All standard stalls are 3.75 x 3.75 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "All premium stalls are 4.00 x 4.00 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Feed room is 4.00 x 4.00 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Service room is 3.00 x 3.00 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Program item present: Worker bedroom (4 workers)",
+      "detail": "function=worker_bedroom"
+    },
+    {
+      "check": "Program item present: Worker bathroom",
+      "detail": "function=worker_bathroom"
+    },
+    {
+      "check": "Program item present: Worker kitchen",
+      "detail": "function=worker_kitchen"
+    },
+    {
+      "check": "Program item present: Men's majlis",
+      "detail": "function=majlis"
+    },
+    {
+      "check": "Program item present: Men's WC",
+      "detail": "function=mens_wc"
+    },
+    {
+      "check": "Program item present: Outdoor sitting area",
+      "detail": "function=outdoor_sitting"
+    },
+    {
+      "check": "Program item present: Private bedroom",
+      "detail": "function=private_bedroom"
+    },
+    {
+      "check": "Program item present: Private bathroom",
+      "detail": "function=private_bathroom"
+    },
+    {
+      "check": "Horizontal (X) dimension chain totals exactly 40.00 m",
+      "detail": "sum=40.0"
+    },
+    {
+      "check": "Vertical (Y) dimension chain totals exactly 50.00 m",
+      "detail": "sum=50.0"
+    },
+    {
+      "check": "Both paddocks have identical, consistent area",
+      "detail": "areas=[318.92]"
+    },
+    {
+      "check": "Total scheduled area does not exceed site area",
+      "detail": "total_area=1647.01, site_area=2000.0"
+    },
+    {
+      "check": "Every space has a defined door/gate location",
+      "detail": "missing=[]"
+    }
+  ],
+  "failed_checks": [],
+  "warnings": [
+    {
+      "warning": "Rooms sized/reflowed by redesign choice (no exact dimension in source, or deliberately changed from an inconsistent/inefficient existing layout) - see model.py notes per room",
+      "items": [
+        "WB01",
+        "WK01",
+        "WBTH01",
+        "WSY01",
+        "FL01"
+      ]
+    },
+    {
+      "warning": "Special horse room Arabic label (مصلب / مصاب) is unresolved; function not finalized",
+      "items": [
+        "SP01",
+        "SP02"
+      ]
+    },
+    {
+      "warning": "Service room sized 3.00x3.00m per Requirments.txt (explicit requirement); stable 1.pdf CAD dimensions the same room at 6.00x3.00m. Owner should confirm which governs.",
+      "items": [
+        "SV01"
+      ]
+    },
+    {
+      "warning": "Outdoor majlis/sitting width (OSA01) and private bathroom width (PBTH01) were not fully legible in stable 1.pdf; sized by redesign choice (see model.py notes). Confirm with owner.",
+      "items": [
+        "OSA01",
+        "PBTH01"
+      ]
+    },
+    {
+      "warning": "Parking apron (PK01) found only in the rendered image, not in Requirments.txt or stable 1.pdf; included as an optional upgrade pending owner confirmation.",
+      "items": [
+        "PK01"
+      ]
+    }
+  ],
+  "status": "PASS"
+}

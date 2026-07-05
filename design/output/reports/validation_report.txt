@@ -1,0 +1,54 @@
+STABLE REDESIGN - MATHEMATICAL VALIDATION REPORT
+Concept plan only. Not for construction or permit use until reviewed and approved by a licensed
+local architect/engineer, MEP/civil engineer, and fire/life-safety consultant.
+==============================================================================
+Site: 40.0 m x 50.0 m = 2000.0 m^2
+Total spaces scheduled: 40
+Total scheduled area: 1647.01 m^2
+X dimension chain sum: 40.0 m (must equal 40.00)
+Y dimension chain sum: 50.0 m (must equal 50.00)
+OVERALL STATUS: PASS
+==============================================================================
+
+PASSED CHECKS (27):
+  [PASS] Site width == 40.00 m -- SITE_WIDTH=40.0
+  [PASS] Site depth == 50.00 m -- SITE_DEPTH=50.0
+  [PASS] All spaces fit inside site boundary -- out_of_bounds=[]
+  [PASS] No overlapping spaces (parking-within-motor-court exempted) -- overlaps=[]
+  [PASS] Exactly 20 standard horse stalls -- count=20
+  [PASS] Exactly 2 premium horse stalls -- count=2
+  [PASS] Exactly 2 special horse rooms (label unresolved, flagged) -- count=2
+  [PASS] Exactly 2 paddocks -- count=2
+  [PASS] Exactly 1 feed room -- count=1
+  [PASS] Exactly 1 service room -- count=1
+  [PASS] All standard stalls are 3.75 x 3.75 m -- bad=[]
+  [PASS] All premium stalls are 4.00 x 4.00 m -- bad=[]
+  [PASS] Feed room is 4.00 x 4.00 m -- bad=[]
+  [PASS] Service room is 3.00 x 3.00 m -- bad=[]
+  [PASS] Program item present: Worker bedroom (4 workers) -- function=worker_bedroom
+  [PASS] Program item present: Worker bathroom -- function=worker_bathroom
+  [PASS] Program item present: Worker kitchen -- function=worker_kitchen
+  [PASS] Program item present: Men's majlis -- function=majlis
+  [PASS] Program item present: Men's WC -- function=mens_wc
+  [PASS] Program item present: Outdoor sitting area -- function=outdoor_sitting
+  [PASS] Program item present: Private bedroom -- function=private_bedroom
+  [PASS] Program item present: Private bathroom -- function=private_bathroom
+  [PASS] Horizontal (X) dimension chain totals exactly 40.00 m -- sum=40.0
+  [PASS] Vertical (Y) dimension chain totals exactly 50.00 m -- sum=50.0
+  [PASS] Both paddocks have identical, consistent area -- areas=[318.92]
+  [PASS] Total scheduled area does not exceed site area -- total_area=1647.01, site_area=2000.0
+  [PASS] Every space has a defined door/gate location -- missing=[]
+
+FAILED CHECKS (0):
+
+WARNINGS (5):
+  [WARN] Rooms sized/reflowed by redesign choice (no exact dimension in source, or deliberately changed from an inconsistent/inefficient existing layout) - see model.py notes per room
+         items: WB01, WK01, WBTH01, WSY01, FL01
+  [WARN] Special horse room Arabic label (مصلب / مصاب) is unresolved; function not finalized
+         items: SP01, SP02
+  [WARN] Service room sized 3.00x3.00m per Requirments.txt (explicit requirement); stable 1.pdf CAD dimensions the same room at 6.00x3.00m. Owner should confirm which governs.
+         items: SV01
+  [WARN] Outdoor majlis/sitting width (OSA01) and private bathroom width (PBTH01) were not fully legible in stable 1.pdf; sized by redesign choice (see model.py notes). Confirm with owner.
+         items: OSA01, PBTH01
+  [WARN] Parking apron (PK01) found only in the rendered image, not in Requirments.txt or stable 1.pdf; included as an optional upgrade pending owner confirmation.
+         items: PK01
