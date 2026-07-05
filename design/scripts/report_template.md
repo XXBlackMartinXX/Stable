@@ -19,7 +19,7 @@ This redesign keeps every mandated room, count, and confirmed dimension, and reo
 compound into eight clear west-to-east bands (guest arrival → majlis/private-suite → stable aisle →
 feed/service/worker wing → paddocks), separated by a continuous perimeter fire/service lane so
 horse, guest, and service circulation never cross unnecessarily. Both paddocks are equalized at
-318.92 m² each (previously unequal in the source). All 40 spaces are
+{{PADDOCK_AREA}} m² each (previously unequal in the source). All {{SPACE_COUNT}} spaces are
 validated by script: every dimension chain closes exactly to 40.00 x 50.00 m, no rooms overlap, and
 every mandatory count and size from the source program is present. Two items are explicitly flagged
 as unresolved rather than guessed: the special horse-room label (spelled two different ways in two
@@ -122,7 +122,7 @@ never given in any source file).
 | 2 | Service room size | `Requirments.txt` line 6: **3.00 x 3.00 m** (explicit written requirement) | `stable 1.pdf`: **6.00 x 3.00 m** (measured CAD) | Used **3.00 x 3.00 m** as the validated default per the source hierarchy (explicit requirement outranks a CAD reading); 6.00x3.00 recorded as the noted alternative | High (both readings are clear; the conflict is which one governs) | **YES — required** |
 | 3 | Outdoor majlis / private bathroom width | `stable 1.pdf`: depth dimensioned, width not clearly legible at scan resolution | — | Sized by redesign choice: outdoor majlis mirrors the indoor majlis (8.00 m) for a symmetric twin-courtyard; private bathroom assumed same width as the bedroom above it (4.83 m) | Medium | Recommended |
 | 4 | Worker housing proportions | `stable 1.pdf`: single narrow block, 4.74 x 13.66 m overall | — | Redesign reflows the same combined area into a shallower, wider 3-room wing (bedroom/kitchen/bath) aligned with the feed/service wing — same function and similar total area, improved proportions | N/A (deliberate improvement) | Recommended |
-| 5 | Paddock sizing | `stable 1.pdf`: unequal, ~150 m² and ~225 m² | — | Redesign makes both paddocks equal at 318.92 m² each | N/A (deliberate improvement) | Recommended |
+| 5 | Paddock sizing | `stable 1.pdf`: unequal, ~150 m² and ~225 m² | — | Redesign makes both paddocks equal at {{PADDOCK_AREA}} m² each | N/A (deliberate improvement) | Recommended |
 | 6 | Parking apron | Not in `Requirments.txt` or `stable 1.pdf` | Present in render `...3.27.30 PM.jpeg` ("بركنج", ~4 cars) | Included as an **optional** upgrade (PK01), clearly flagged | N/A | **YES — confirm keep/resize/omit** |
 
 ## 4. Required Program Checklist (source vs. delivered)
@@ -134,7 +134,7 @@ never given in any source file).
 | Premium horse stalls | 2 @ 4.00x4.00m | 2 @ 4.00x4.00m (P01, P02) | ✅ |
 | Special horse rooms | 2, label unclear | 2 @ 3.50x4.00m (SP01, SP02), label UNCONFIRMED | ✅ (flagged) |
 | Feed room | 1 @ 4.00x4.00m | 1 @ 4.00x4.00m (FD01) | ✅ |
-| Paddocks | 2 | 2 @ 318.92 m² each, equal (PD01, PD02) | ✅ (+ improved) |
+| Paddocks | 2 | 2 @ {{PADDOCK_AREA}} m² each, equal (PD01, PD02) | ✅ (+ improved) |
 | Service room | 1 @ 3.00x3.00m | 1 @ 3.00x3.00m (SV01); CAD 6x3 conflict noted | ✅ (flagged) |
 | Worker bedroom (4) | 1 | WB01, 7.00x4.00m = 28 m² | ✅ |
 | Worker bathroom | 1 | WBTH01, 3.00x4.00m = 12 m² | ✅ |
@@ -234,34 +234,15 @@ and the 3D massing model described in §16. All follow the exact coordinates in 
 
 ## 9. Full Room Schedule
 
-Full machine-readable schedule: `design/output/schedules/room_schedule.csv` (40 spaces,
+Full machine-readable schedule: `design/output/schedules/room_schedule.csv` ({{SPACE_COUNT}} spaces,
 all fields: ID, Arabic/English name, function, width, depth, area, coordinates, door, source, notes).
 The table below is generated directly from `design/scripts/model.py` — the same source of truth
 used for every other output.
 
-| ID(s) | Room | Size (m) | Area (m²) | Source |
-|---|---|---|---|---|
-| S01–S20 | Standard Horse Stall | 3.75x3.75 | 14.06 each | required_program |
-| WB01 | Worker Bedroom (4 workers) | 7.00x4.00 | 28.00 | redesign_improvement |
-| WK01 | Worker Kitchen | 4.50x4.00 | 18.00 | redesign_improvement |
-| WBTH01 | Worker Bathroom | 3.00x4.00 | 12.00 | redesign_improvement |
-| P01, P02 | Premium Horse Stall | 4.00x4.00 | 16.00 each | required_program |
-| SP01, SP02 | Special Horse Room (label unresolved) | 3.50x4.00 | 14.00 each | cad_sourced / UNRESOLVED LABEL |
-| FD01 | Feed Room | 4.00x4.00 | 16.00 | required_program |
-| SV01 | Service Room | 3.00x3.00 | 9.00 | required_program / SOURCE CONFLICT |
-| MJ01 | Men's Majlis | 8.00x8.24 | 65.92 | cad_sourced |
-| MWC01 | Men's WC (majlis) | 1.76x1.76 | 3.10 | cad_sourced |
-| OSA01 | Outdoor Majlis / Sitting Area | 8.00x8.24 | 65.92 | cad_sourced_approx |
-| PBR01 | Private Bedroom | 4.83x3.76 | 18.16 | cad_sourced |
-| PBTH01 | Private Bathroom | 4.83x2.00 | 9.66 | cad_sourced_approx |
-| PK01 | Parking Apron (4 bays) | 11.00x4.00 | 44.00 | OPTIONAL - found in render only |
-| PD01, PD02 | Paddock | 17.00x18.76 | 318.92 each | required_program / redesign_improvement |
-| WSY01 | Wash / Manure Service Spine | 3.50x18.76 | 65.66 | redesign_choice |
-| FL01 | Perimeter Service / Fire Lane | 2.50x50.00 | 125.00 | redesign_choice |
-| MC01 | Motor Court / Arrival | 37.50x5.00 | 187.50 | cad_sourced_approx |
+{{ROOM_SCHEDULE_TABLE}}
 
-**Total scheduled area: 1647.01 m² of 2000.00 m² site (82.4%)** — the
-remaining ~17.6% is landscaped buffer/transition/aisle circulation, deliberately left
+**Total scheduled area: {{TOTAL_AREA}} m² of {{SITE_AREA}} m² site ({{TOTAL_AREA_PCT}}%)** — the
+remaining ~{{REMAINING_PCT}}% is landscaped buffer/transition/aisle circulation, deliberately left
 open for a calm, uncluttered feel.
 
 ## 10. Full Coordinate Schedule
@@ -272,12 +253,12 @@ Coordinate system: origin (0,0) = southwest/front-left corner; X = width (0–40
 
 ## 11. Dimension Chain Verification
 
-**Horizontal (X) chain:** Program width (stalls, wing, guest rooms, paddocks) 0→37.5 (37.5) + Perimeter service / emergency fire lane 37.5→40 (2.5) = **40.00 m exactly.**
+**Horizontal (X) chain:** {{X_CHAIN_TEXT}} = **{{SITE_WIDTH}} m exactly.**
 
-**Vertical (Y) chain:** Motor court / arrival + parking apron 0→5 (5) + Guest rooms band (majlis / outdoor majlis-sitting / private suite) 5→13.24 (8.24) + Landscaped transition / privacy buffer 13.24→15.24 (2) + Stable Row A (standard stalls S01-S10) 15.24→18.99 (3.75) + Central stable aisle 18.99→22.49 (3.5) + Stable Row B (standard stalls S11-S20) 22.49→26.24 (3.75) + Feed / service / premium / special / worker wing 26.24→30.24 (4) + Vestibule / gate transition to paddock spine 30.24→31.24 (1) + Paddocks + central wash/manure service spine 31.24→50 (18.76) = **50.00 m exactly.**
+**Vertical (Y) chain:** {{Y_CHAIN_TEXT}} = **{{SITE_DEPTH}} m exactly.**
 
 Both confirmed by `design/scripts/validate.py` (see §17) — script output: `x_dimension_chain_sum_m:
-40.00`, `y_dimension_chain_sum_m: 50.00`.
+{{X_CHAIN_SUM}}`, `y_dimension_chain_sum_m: {{Y_CHAIN_SUM}}`.
 
 ## 12. Circulation and Operations
 
@@ -368,19 +349,7 @@ trees are componentized and arrayed).
 Full JSON/TXT reports: `design/output/reports/validation_report.json` / `.txt`. Summary (generated
 directly from that JSON, not hand-typed):
 
-- **Overall status: PASS** (0 failed checks, 27 passed checks, 5 disclosed warnings).
-- Site boundary exactly 40.00 x 50.00 m; all 40 spaces fit inside it; zero overlaps.
-- Exact counts confirmed: 20 standard stalls, 2 premium, 2 special, 2 paddocks, 1 feed room, 1 service room, and every named guest/worker room present.
-- All mandatory sizes confirmed: standard stalls 3.75x3.75, premium 4.00x4.00, feed 4.00x4.00, service 3.00x3.00.
-- X and Y dimension chains both close exactly (40.00 m / 50.00 m).
-- Both paddocks equal (318.92 m² each).
-- Every space has a defined door/gate.
-- 5 warnings disclosed openly (not hidden):
-  - Rooms sized/reflowed by redesign choice (no exact dimension in source, or deliberately changed from an inconsistent/inefficient existing layout) - see model.py notes per room (WB01, WK01, WBTH01, WSY01, FL01)
-  - Special horse room Arabic label (مصلب / مصاب) is unresolved; function not finalized (SP01, SP02)
-  - Service room sized 3.00x3.00m per Requirments.txt (explicit requirement); stable 1.pdf CAD dimensions the same room at 6.00x3.00m. Owner should confirm which governs. (SV01)
-  - Outdoor majlis/sitting width (OSA01) and private bathroom width (PBTH01) were not fully legible in stable 1.pdf; sized by redesign choice (see model.py notes). Confirm with owner. (OSA01, PBTH01)
-  - Parking apron (PK01) found only in the rendered image, not in Requirments.txt or stable 1.pdf; included as an optional upgrade pending owner confirmation. (PK01)
+{{VALIDATION_SUMMARY}}
 
 ## 18. Remaining Items Requiring Licensed Professional Review
 
@@ -419,13 +388,13 @@ directly from that JSON, not hand-typed):
 - [x] Service circulation works (dedicated perimeter lane + wash/manure spine).
 - [x] Guest circulation works (arrival → majlis → private suite, buffered from stable).
 - [x] Dimension chains close exactly (40.00 / 50.00).
-- [x] Paddock dimensions consistent everywhere (plan, schedule, 3D model all show 318.92 m² x2).
+- [x] Paddock dimensions consistent everywhere (plan, schedule, 3D model all show {{PADDOCK_AREA}} m² x2).
 - [x] Arabic labels preserved and readable throughout.
 - [x] 3D model matches validated CAD geometry (same coordinates, no invented rooms).
 - [x] DXF marked as concept underlay only.
 - [x] Every drawing includes the concept-only disclaimer.
 - [x] No code/permitting compliance falsely claimed.
-- [ ] Owner confirmation still pending on the 5 flagged items in §5 before this
+- [ ] Owner confirmation still pending on the {{UNRESOLVED_COUNT}} flagged items in §5 before this
       leaves "concept" status.
 
 ## 20. Deliverables Index
@@ -435,7 +404,7 @@ All files are committed to this repository under `design/`:
 ```
 design/
   scripts/
-    model.py               - single source of truth for all 40 space coordinates
+    model.py               - single source of truth for all {{SPACE_COUNT}} space coordinates
     validate.py             - mathematical validation agent (run: python3 validate.py)
     export_schedules.py     - room/coordinate CSV generator
     export_dxf.py           - DXF CAD underlay generator (ezdxf)
