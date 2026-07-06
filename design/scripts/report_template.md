@@ -333,22 +333,36 @@ A calm, materials-first luxury language — proportion and shade rhythm rather t
 
 ## 16. 3D / Render Deliverables
 
-A real 3D massing model was built directly from the validated coordinates above using the Trimble
-SketchUp MCP connector (not a text-only "render prompt" — actual SketchUp geometry, componentized
-where rooms repeat: 20 standard stalls share one component definition, fence posts and landscape
-trees are componentized and arrayed).
+**3D massing model generated from finalized validated 2D coordinate model. Concept visualization
+only — not for construction.**
 
-- **File:** `Luxury_Equestrian_Stable_Concept.skp` — download link (session-scoped, from the
-  SketchUp cloud service, valid for this session):
-  `https://api.sketchup.com/mcp/v1/sketchup/dl/293bb122-f1db-42db-942c-091da229db7a/009-save/luxury_equestrian_stable_concept.skp?t=lnA799PgF4vJsDMpwbLG6w`
+A real 3D massing model was built directly from the finalized, validated coordinates above using
+the Trimble SketchUp MCP connector (not a text-only "render prompt" — actual SketchUp geometry,
+componentized where rooms repeat: 20 standard stalls share one component definition, fence posts
+and landscape trees are componentized and arrayed). This model was regenerated after the owner-
+confirmation pass and reflects the current `model.py` exactly — it is not stale.
+
+- **File:** `Luxury_Equestrian_Stable_Concept_Finalized.skp` — download link (session-scoped, from
+  the SketchUp cloud service, valid for this session): `{{SKETCHUP_DOWNLOAD_URL}}`
   — note: this environment's outbound network policy blocks `api.sketchup.com`, so the file could
   not be copied into this repository; open the link directly in your own browser to download it.
-- **Thumbnail preview:** `design/output/plans/sketchup_thumbnail.png` (included in this repo).
-- Contents: site ground pad, equalized paddock turf with post-and-rail fencing, motor
-  court/parking/fire-lane paving, the full stable barn (20 standard + 2 premium + 2 special stalls,
-  feed + service rooms, shade canopy), worker wing, guest/owner wing (majlis, WC, pergola-roofed
-  outdoor majlis, private suite), and 9 landscape trees — all at the exact coordinates validated in
-  §10/§11, at real-world scale (meters converted to inches internally per SketchUp convention).
+- **Thumbnail / aerial render:** `design/output/plans/sketchup_thumbnail.png` and
+  `design/output/plans/aerial_3d_render.png` (both included in this repo).
+- Contents, at the exact coordinates validated in §10/§11 (real-world scale, meters converted to
+  inches internally per SketchUp convention):
+  - Site ground pad, equalized paddock turf (2 x 318.92 m²) with post-and-rail fencing.
+  - Motor court, parking apron (PK01, kept at 11.00x4.00 m per owner confirmation), and perimeter
+    fire-lane paving.
+  - Stable barn: 20 standard stalls + 2 premium stalls + **2 veterinary/isolation rooms (مصاب,
+    3.50x4.00 m each — labeled and colored distinctly from the general stall population, per the
+    owner-confirmed function)** + feed room + **service room at its owner-confirmed 6.00x3.00 m**
+    + shade canopy over the central aisle.
+  - Worker wing: worker bedroom (WB01, unchanged, 7.00x4.00 m) + **worker kitchen (WK01) and
+    worker bathroom (WBTH01), both modeled at their finalized narrowed widths (3.50 m and 2.00 m
+    respectively)** to match the wing reflow required by the service-room decision.
+  - Guest/owner wing: majlis, men's WC, pergola-roofed outdoor majlis/sitting terrace, private
+    bedroom suite with ensuite bathroom — all unchanged, per owner confirmation.
+  - 9 landscape trees.
 - Every room mass and its roof were generated programmatically from the same `model.py` coordinate
   source used for the SVG/DXF/CSV outputs (Canary 10: renders match the validated CAD geometry).
 - **Honesty on tooling:** no photorealistic path-traced rendering engine (e.g. V-Ray, Enscape) was
@@ -356,11 +370,6 @@ trees are componentized and arrayed).
   model with a presentation style (Urban Planning preset, shadows on) and a luxury aerial camera
   angle — sufficient to verify massing, proportion, and adjacency, but not a photoreal marketing
   render. If a photoreal render is required, this .skp is ready to hand to Enscape/V-Ray/Twinmotion.
-- **Known gap (disclosed, not hidden):** this .skp was built before the owner-confirmation pass
-  that resized SV01 to 6.00x3.00 m and narrowed WK01/WBTH01 to fit it. The 3D model's wing massing
-  therefore reflects the pre-finalization geometry (SV01 still shown at 3.00x3.00 m) and should be
-  regenerated from the current `model.py` before being used as a final visual reference. The 2D
-  plans, DXF, CSVs, and this report are all current; only the .skp lags.
 
 ## 17. Validation Report
 
@@ -383,8 +392,6 @@ directly from that JSON, not hand-typed):
   which has been verified in this exercise.
 - The veterinary/isolation fit-out for SP01/SP02 (ventilation, drainage, exam lighting) still needs
   a licensed veterinary/MEP consultant, even though the room function itself is now confirmed.
-- The 3D massing model (§16) needs to be regenerated to reflect the finalized SV01/WK01/WBTH01
-  geometry before being used as a visual reference.
 
 ## 19. Final Acceptance Checklist
 
@@ -417,8 +424,8 @@ directly from that JSON, not hand-typed):
 - [x] Every drawing includes the concept-only disclaimer.
 - [x] No code/permitting compliance falsely claimed.
 - [x] Owner confirmation obtained on all {{UNRESOLVED_COUNT}} previously-flagged items in §5.
-- [ ] 3D massing model (§16) regenerated to match the finalized SV01/WK01/WBTH01 geometry (not yet
-      done this pass - the 2D plans/DXF/CSVs/report are current, the .skp lags).
+- [x] 3D massing model (§16) regenerated to match the finalized SV01/WK01/WBTH01 geometry - the
+      2D plans, DXF, CSVs, report, and 3D model are all current and consistent with each other.
 
 ## 20. Deliverables Index
 
@@ -443,6 +450,7 @@ design/
       masterplan_luxury.svg / .png
       stable_concept_underlay.dxf
       sketchup_thumbnail.png
+      aerial_3d_render.png
     reports/
       validation_report.json / .txt
       source_audit.md         (this file - generated, do not hand-edit numeric sections)
@@ -450,9 +458,9 @@ source_files/
   Stable PROJECT/            - the 4 uploaded source files, unmodified
   stable1_page.png           - full-page reference render of stable 1.pdf, used during the source audit
 FINAL_QA_LOCK_REPORT.md      - area-discrepancy audit (prior pass)
-OWNER_CONFIRMATION_FINALIZATION_REPORT.md - this pass's owner-decision record
+OWNER_CONFIRMATION_FINALIZATION_REPORT.md - owner-decision record (prior pass)
+THREE_D_SYNC_REPORT.md       - this pass's 3D-model regeneration record
 ```
 
 3D model download (session-scoped, blocked from in-repo copy by this environment's network
-policy — open directly in your browser):
-`https://api.sketchup.com/mcp/v1/sketchup/dl/293bb122-f1db-42db-942c-091da229db7a/009-save/luxury_equestrian_stable_concept.skp?t=lnA799PgF4vJsDMpwbLG6w`
+policy — open directly in your browser): `{{SKETCHUP_DOWNLOAD_URL}}`
