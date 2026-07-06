@@ -1,0 +1,168 @@
+{
+  "site": {
+    "width_m": 40.0,
+    "depth_m": 50.0,
+    "area_m2": 2000.0
+  },
+  "totals": {
+    "space_count": 40,
+    "total_scheduled_area_m2": 1648.01,
+    "x_dimension_chain_sum_m": 40.0,
+    "y_dimension_chain_sum_m": 50.0
+  },
+  "passed_checks": [
+    {
+      "check": "Site width == 40.00 m",
+      "detail": "SITE_WIDTH=40.0"
+    },
+    {
+      "check": "Site depth == 50.00 m",
+      "detail": "SITE_DEPTH=50.0"
+    },
+    {
+      "check": "All spaces fit inside site boundary",
+      "detail": "out_of_bounds=[]"
+    },
+    {
+      "check": "No overlapping spaces (parking-within-motor-court exempted)",
+      "detail": "overlaps=[]"
+    },
+    {
+      "check": "Exactly 20 standard horse stalls",
+      "detail": "count=20"
+    },
+    {
+      "check": "Exactly 2 premium horse stalls",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 2 veterinary/isolation rooms (label confirmed: مصاب)",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 2 paddocks",
+      "detail": "count=2"
+    },
+    {
+      "check": "Exactly 1 feed room",
+      "detail": "count=1"
+    },
+    {
+      "check": "Exactly 1 service room",
+      "detail": "count=1"
+    },
+    {
+      "check": "All standard stalls are 3.75 x 3.75 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "All premium stalls are 4.00 x 4.00 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Feed room is 4.00 x 4.00 m",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Service room is 6.00 x 3.00 m (owner-confirmed, supersedes the 3.00x3.00m brief)",
+      "detail": "bad=[]"
+    },
+    {
+      "check": "Program item present: Worker bedroom (4 workers)",
+      "detail": "function=worker_bedroom"
+    },
+    {
+      "check": "Program item present: Worker bathroom",
+      "detail": "function=worker_bathroom"
+    },
+    {
+      "check": "Program item present: Worker kitchen",
+      "detail": "function=worker_kitchen"
+    },
+    {
+      "check": "Program item present: Men's majlis",
+      "detail": "function=majlis"
+    },
+    {
+      "check": "Program item present: Men's WC",
+      "detail": "function=mens_wc"
+    },
+    {
+      "check": "Program item present: Outdoor sitting area",
+      "detail": "function=outdoor_sitting"
+    },
+    {
+      "check": "Program item present: Private bedroom",
+      "detail": "function=private_bedroom"
+    },
+    {
+      "check": "Program item present: Private bathroom",
+      "detail": "function=private_bathroom"
+    },
+    {
+      "check": "Horizontal (X) dimension chain totals exactly 40.00 m",
+      "detail": "sum=40.0"
+    },
+    {
+      "check": "Vertical (Y) dimension chain totals exactly 50.00 m",
+      "detail": "sum=50.0"
+    },
+    {
+      "check": "Both paddocks have identical, consistent area",
+      "detail": "areas=[318.92]"
+    },
+    {
+      "check": "Total scheduled area does not exceed site area",
+      "detail": "total_area=1648.01, site_area=2000.0"
+    },
+    {
+      "check": "Every space has a defined door/gate location",
+      "detail": "missing=[]"
+    }
+  ],
+  "failed_checks": [],
+  "warnings": [
+    {
+      "warning": "Worker kitchen (WK01) and worker bathroom (WBTH01) were narrowed this pass (4.50->3.50m and 3.00->2.00m respectively) to fit the owner-confirmed 6.00m-wide service room into the wing band. Neither room has a source-mandated size, so this is a disclosed redesign trade-off, not an open question.",
+      "items": [
+        "WK01",
+        "WBTH01"
+      ]
+    }
+  ],
+  "resolved_decisions": [
+    {
+      "decision": "Special horse rooms (SP01, SP02) confirmed as 'مصاب' - injured/veterinary isolation rooms. The CAD's alternate spelling 'مصلب' is superseded.",
+      "items": [
+        "SP01",
+        "SP02"
+      ]
+    },
+    {
+      "decision": "Service room (SV01) confirmed at 6.00x3.00 m, per stable 1.pdf CAD - supersedes the 3.00x3.00 m in Requirments.txt line 6.",
+      "items": [
+        "SV01"
+      ]
+    },
+    {
+      "decision": "Parking apron (PK01) confirmed to be kept as modeled (11.00x4.00 m, 4 bays).",
+      "items": [
+        "PK01"
+      ]
+    },
+    {
+      "decision": "Outdoor majlis width (OSA01) and private bathroom width (PBTH01) confirmed as modeled - no change.",
+      "items": [
+        "OSA01",
+        "PBTH01"
+      ]
+    },
+    {
+      "decision": "Worker bedroom (WB01) footprint and bunk layout for 4 workers confirmed as modeled - no change.",
+      "items": [
+        "WB01"
+      ]
+    }
+  ],
+  "status": "PASS"
+}
