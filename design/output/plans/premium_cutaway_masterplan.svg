@@ -1,0 +1,466 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140.0" height="1450.0" viewBox="0 0 1140.0 1450.0">
+<defs>
+<filter id="softblur" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur in="SourceGraphic" stdDeviation="3"/></filter>
+<linearGradient id="grad_c9a066" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ddb87e"/><stop offset="100%" stop-color="#c9a066"/></linearGradient>
+<linearGradient id="grad_b8894f" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#cc9d63"/><stop offset="100%" stop-color="#b8894f"/></linearGradient>
+<linearGradient id="grad_c17a5c" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d4906f"/><stop offset="100%" stop-color="#c17a5c"/></linearGradient>
+<linearGradient id="grad_8c9a5e" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a2b073"/><stop offset="100%" stop-color="#8c9a5e"/></linearGradient>
+<linearGradient id="grad_9a9690" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aeaaa4"/><stop offset="100%" stop-color="#9a9690"/></linearGradient>
+<linearGradient id="grad_7a9bbd" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#8fadcc"/><stop offset="100%" stop-color="#7a9bbd"/></linearGradient>
+<linearGradient id="grad_6b4632" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#82593f"/><stop offset="100%" stop-color="#6b4632"/></linearGradient>
+<linearGradient id="grad_8d7b68" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a08d78"/><stop offset="100%" stop-color="#8d7b68"/></linearGradient>
+<linearGradient id="grad_e8dcc0" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f2e9d4"/><stop offset="100%" stop-color="#e8dcc0"/></linearGradient>
+<linearGradient id="grad_5c6f45" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#71835a"/><stop offset="100%" stop-color="#5c6f45"/></linearGradient>
+<linearGradient id="grad_d8c9a0" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e6dab5"/><stop offset="100%" stop-color="#d8c9a0"/></linearGradient>
+<linearGradient id="grad_c7c3ba" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#d5d1c8"/><stop offset="100%" stop-color="#c7c3ba"/></linearGradient>
+<linearGradient id="grad_bab6ae" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c9c5bd"/><stop offset="100%" stop-color="#bab6ae"/></linearGradient>
+<linearGradient id="grad_ece2cd" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#f5eddd"/><stop offset="100%" stop-color="#ece2cd"/></linearGradient>
+<linearGradient id="grad_a8a49c" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bab6ae"/><stop offset="100%" stop-color="#a8a49c"/></linearGradient>
+<linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#faf5e9"/><stop offset="100%" stop-color="#f0e8d4"/></linearGradient>
+</defs>
+<rect x="0" y="0" width="1140.0" height="1450.0" fill="url(#bgGrad)"/>
+<text x="110" y="42" font-size="26" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="800" fill="#2a2018">LUXURY EQUESTRIAN STABLE</text>
+<text x="110" y="66" font-size="15" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#6b5d47">Premium Concept Masterplan  —  Finalized Validated Layout</text>
+<text x="110" y="92" font-size="17" text-anchor="start" font-family="Noto Sans Arabic" font-weight="600" fill="#6b5d47">مخطط عام فاخر، تصميم معتمد ونهائي</text>
+<rect x="113" y="114" width="800.0" height="1000.0" fill="#000000" fill-opacity="0.10" filter="url(#softblur)"/>
+<rect x="110" y="110" width="800.0" height="1000.0" fill="#efe6cf" stroke="#2a2018" stroke-width="2.5"/>
+<g stroke="#2a2018" fill="#2a2018"><line x1="960.0" y1="214" x2="960.0" y2="180" stroke-width="2"/><polygon points="960.0,172 953.0,186 967.0,186"/></g>
+<text x="960.0" y="230" font-size="12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">GATE</text>
+<text x="960.0" y="248" font-size="12" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="500" fill="#6b5d47">البوابة</text>
+<rect x="114.0" y="739.8" width="340.0" height="375.20000000000005" fill="#000000" fill-opacity="0.15" filter="url(#softblur)"/>
+<clipPath id="clip_PD01"><rect x="110.0" y="734.8" width="340.0" height="375.20000000000005" rx="3"/></clipPath>
+<g clip-path="url(#clip_PD01)">
+<rect x="110.0" y="734.8" width="340.0" height="375.20000000000005" fill="#d8c9a0"/>
+<ellipse cx="196.2" cy="737.7" rx="21.6" ry="9.7" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="435.7" cy="955.6" rx="20.2" ry="9.1" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="354.1" cy="1068.3" rx="22.4" ry="10.1" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="300.9" cy="859.4" rx="28.5" ry="12.8" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="334.8" cy="919.0" rx="18.9" ry="8.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="315.3" cy="737.8" rx="26.2" ry="11.8" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="134.1" cy="1016.9" rx="26.0" ry="11.7" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="111.8" cy="917.7" rx="13.2" ry="5.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="276.7" cy="961.3" rx="14.4" ry="6.5" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="410.7" cy="1054.5" rx="13.9" ry="6.3" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="421.6" cy="805.8" rx="22.2" ry="10.0" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="328.1" cy="949.4" rx="26.5" ry="11.9" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="442.6" cy="744.6" rx="24.4" ry="11.0" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="256.6" cy="1109.4" rx="19.8" ry="8.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="287.1" cy="864.9" rx="13.6" ry="6.1" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="425.6" cy="892.4" rx="12.7" ry="5.7" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="145.6" cy="737.3" rx="26.2" ry="11.8" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="159.2" cy="1013.0" rx="21.2" ry="9.5" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="440.3" cy="997.8" rx="25.9" ry="11.7" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="317.9" cy="1040.9" rx="24.6" ry="11.1" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="228.7" cy="1086.1" rx="29.0" ry="13.1" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="174.2" cy="1067.9" rx="12.4" ry="5.6" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="115.1" cy="972.6" rx="13.9" ry="6.3" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="209.7" cy="844.4" rx="10.9" ry="4.9" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="225.3" cy="947.2" rx="18.2" ry="8.2" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="118.5" cy="965.3" rx="25.4" ry="11.4" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="394.1" cy="943.7" rx="23.8" ry="10.7" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="178.0" cy="979.2" rx="28.7" ry="12.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="418.5" cy="1030.4" rx="23.2" ry="10.5" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="389.6" cy="1045.9" rx="22.3" ry="10.1" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="246.9" cy="882.6" rx="26.5" ry="11.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="345.8" cy="784.2" rx="13.7" ry="6.1" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="388.8" cy="765.9" rx="10.1" ry="4.6" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="153.2" cy="801.7" rx="17.9" ry="8.0" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="140.3" cy="1052.3" rx="14.1" ry="6.4" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="414.8" cy="978.0" rx="14.0" ry="6.3" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="347.0" cy="984.5" rx="16.1" ry="7.3" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="374.4" cy="844.5" rx="23.3" ry="10.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="350.6" cy="956.4" rx="21.2" ry="9.5" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="115.6" cy="889.9" rx="26.6" ry="12.0" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="325.2" cy="939.1" rx="20.5" ry="9.2" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="431.2" cy="785.1" rx="21.6" ry="9.7" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="384.3" cy="797.9" rx="27.5" ry="12.4" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="289.8" cy="1086.3" rx="11.4" ry="5.2" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="219.0" cy="971.7" rx="19.4" ry="8.7" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="386.9" cy="1016.3" rx="26.5" ry="11.9" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="379.2" cy="998.9" rx="17.2" ry="7.8" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="189.2" cy="967.5" rx="20.9" ry="9.4" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="268.7" cy="781.3" rx="11.3" ry="5.1" fill="#e2d3a8" fill-opacity="0.25"/>
+<line x1="130.0" y1="740.8" x2="186.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="170.0" y1="740.8" x2="226.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="210.0" y1="740.8" x2="266.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="250.0" y1="740.8" x2="306.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="290.0" y1="740.8" x2="346.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="330.0" y1="740.8" x2="386.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="370.0" y1="740.8" x2="426.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="410.0" y1="740.8" x2="466.28000000000003" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+</g>
+<rect x="110.0" y="734.8" width="340.0" height="375.20000000000005" rx="3" fill="none" stroke="#b8a878" stroke-width="1.6"/>
+<text x="280.0" y="914.6999999999999" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#5a4c30">بادوك</text>
+<text x="280.0" y="931.3" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#5a4c30">PD01</text>
+<rect x="524.0" y="739.8" width="340.0" height="375.20000000000005" fill="#000000" fill-opacity="0.15" filter="url(#softblur)"/>
+<clipPath id="clip_PD02"><rect x="520.0" y="734.8" width="340.0" height="375.20000000000005" rx="3"/></clipPath>
+<g clip-path="url(#clip_PD02)">
+<rect x="520.0" y="734.8" width="340.0" height="375.20000000000005" fill="#d8c9a0"/>
+<ellipse cx="812.4" cy="1089.2" rx="29.7" ry="13.4" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="669.5" cy="935.4" rx="15.2" ry="6.9" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="816.8" cy="1031.9" rx="13.0" ry="5.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="598.6" cy="744.0" rx="22.9" ry="10.3" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="727.4" cy="1012.5" rx="23.1" ry="10.4" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="642.7" cy="1006.5" rx="12.3" ry="5.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="746.2" cy="771.8" rx="24.0" ry="10.8" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="791.3" cy="845.8" rx="16.6" ry="7.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="719.3" cy="816.5" rx="23.2" ry="10.4" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="840.6" cy="1033.6" rx="11.7" ry="5.3" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="815.1" cy="1059.6" rx="22.4" ry="10.1" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="564.2" cy="1098.2" rx="10.3" ry="4.6" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="829.5" cy="882.7" rx="22.6" ry="10.1" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="636.7" cy="796.3" rx="20.2" ry="9.1" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="664.7" cy="871.5" rx="12.4" ry="5.6" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="572.4" cy="872.6" rx="11.1" ry="5.0" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="705.8" cy="1073.1" rx="23.6" ry="10.6" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="754.8" cy="914.2" rx="24.0" ry="10.8" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="635.0" cy="1050.6" rx="21.9" ry="9.8" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="855.2" cy="931.6" rx="25.5" ry="11.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="705.5" cy="1045.4" rx="21.1" ry="9.5" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="765.0" cy="838.4" rx="27.7" ry="12.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="604.8" cy="879.3" rx="27.5" ry="12.4" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="836.0" cy="942.9" rx="15.0" ry="6.8" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="824.4" cy="878.4" rx="16.1" ry="7.3" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="693.8" cy="763.5" rx="13.4" ry="6.0" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="799.8" cy="818.9" rx="29.5" ry="13.3" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="520.9" cy="920.4" rx="20.9" ry="9.4" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="655.5" cy="843.8" rx="12.6" ry="5.7" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="603.8" cy="741.8" rx="12.4" ry="5.6" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="577.2" cy="812.5" rx="19.4" ry="8.7" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="794.3" cy="882.8" rx="26.9" ry="12.1" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="721.0" cy="1040.3" rx="14.8" ry="6.7" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="746.3" cy="882.7" rx="30.0" ry="13.5" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="662.7" cy="1055.3" rx="13.2" ry="5.9" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="743.4" cy="886.1" rx="16.0" ry="7.2" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="724.0" cy="1083.9" rx="23.1" ry="10.4" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="555.9" cy="818.2" rx="22.0" ry="9.9" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="686.2" cy="868.8" rx="15.0" ry="6.8" fill="#d3c092" fill-opacity="0.25"/>
+<ellipse cx="580.1" cy="874.2" rx="10.4" ry="4.7" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="837.0" cy="882.3" rx="14.2" ry="6.4" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="720.4" cy="911.7" rx="26.7" ry="12.0" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="597.2" cy="1106.1" rx="12.9" ry="5.8" fill="#c7b482" fill-opacity="0.25"/>
+<ellipse cx="575.6" cy="783.1" rx="16.2" ry="7.3" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="678.4" cy="1078.7" rx="11.8" ry="5.3" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="830.6" cy="920.6" rx="23.3" ry="10.5" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="796.6" cy="926.4" rx="17.4" ry="7.8" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="610.0" cy="1027.8" rx="13.3" ry="6.0" fill="#e2d3a8" fill-opacity="0.25"/>
+<ellipse cx="623.7" cy="908.4" rx="14.8" ry="6.7" fill="#c7b482" fill-opacity="0.25"/>
+<line x1="540.0" y1="740.8" x2="596.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="580.0" y1="740.8" x2="636.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="620.0" y1="740.8" x2="676.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="660.0" y1="740.8" x2="716.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="700.0" y1="740.8" x2="756.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="740.0" y1="740.8" x2="796.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="780.0" y1="740.8" x2="836.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+<line x1="820.0" y1="740.8" x2="876.28" y2="1104.0" stroke="#b8a674" stroke-width="1" stroke-opacity="0.3"/>
+</g>
+<rect x="520.0" y="734.8" width="340.0" height="375.20000000000005" rx="3" fill="none" stroke="#b8a878" stroke-width="1.6"/>
+<text x="690.0" y="914.6999999999999" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#5a4c30">بادوك</text>
+<text x="690.0" y="931.3" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#5a4c30">PD02</text>
+<rect x="454.0" y="739.8" width="70.0" height="375.20000000000005" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="450.0" y="734.8" width="70.0" height="375.20000000000005" rx="3" fill="url(#grad_c7c3ba)" stroke="#a19d94" stroke-width="1.6"/>
+<line x1="452.0" y1="737.8" x2="518.0" y2="737.8" stroke="#d5d1c8" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="485.0" y="926.25" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">WSY01</text>
+<rect x="864.0" y="115.0" width="50.0" height="1000.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="860.0" y="110.0" width="50.0" height="1000.0" rx="3" fill="url(#grad_bab6ae)" stroke="#918d85" stroke-width="1.6"/>
+<line x1="862.0" y1="113.0" x2="908.0" y2="113.0" stroke="#c9c5bd" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="885.0" y="612.975" font-size="8.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">FL01</text>
+<rect x="114.0" y="115.0" width="750.0" height="100.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="110.0" y="110.0" width="750.0" height="100.0" rx="3" fill="url(#grad_ece2cd)" stroke="#cfc2a3" stroke-width="1.6"/>
+<line x1="112.0" y1="113.0" x2="858.0" y2="113.0" stroke="#f5eddd" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="485.0" y="163.85" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">MC01</text>
+<rect x="114.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="110.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="112.0" y1="417.8" x2="183.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="123.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 135.125 468.8)"/>
+<rect x="148.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 159.875 468.8)"/>
+<rect x="136.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 147.5 454.85)"/>
+<text x="147.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="147.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S01</text>
+<rect x="189.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="185.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="187.0" y1="417.8" x2="258.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="198.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 210.125 468.8)"/>
+<rect x="223.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 234.875 468.8)"/>
+<rect x="211.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 222.5 454.85)"/>
+<text x="222.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="222.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S02</text>
+<rect x="264.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="260.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="262.0" y1="417.8" x2="333.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="273.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 285.125 468.8)"/>
+<rect x="298.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 309.875 468.8)"/>
+<rect x="286.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 297.5 454.85)"/>
+<text x="297.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="297.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S03</text>
+<rect x="339.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="335.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="337.0" y1="417.8" x2="408.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="348.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 360.125 468.8)"/>
+<rect x="373.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 384.875 468.8)"/>
+<rect x="361.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 372.5 454.85)"/>
+<text x="372.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="372.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S04</text>
+<rect x="414.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="410.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="412.0" y1="417.8" x2="483.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="423.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 435.125 468.8)"/>
+<rect x="448.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 459.875 468.8)"/>
+<rect x="436.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 447.5 454.85)"/>
+<text x="447.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="447.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S05</text>
+<rect x="489.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="485.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="487.0" y1="417.8" x2="558.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="498.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 510.125 468.8)"/>
+<rect x="523.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 534.875 468.8)"/>
+<rect x="511.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 522.5 454.85)"/>
+<text x="522.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="522.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S06</text>
+<rect x="564.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="560.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="562.0" y1="417.8" x2="633.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="573.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 585.125 468.8)"/>
+<rect x="598.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 609.875 468.8)"/>
+<rect x="586.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 597.5 454.85)"/>
+<text x="597.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="597.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S07</text>
+<rect x="639.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="635.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="637.0" y1="417.8" x2="708.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="648.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 660.125 468.8)"/>
+<rect x="673.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 684.875 468.8)"/>
+<rect x="661.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 672.5 454.85)"/>
+<text x="672.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="672.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S08</text>
+<rect x="714.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="710.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="712.0" y1="417.8" x2="783.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="723.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 735.125 468.8)"/>
+<rect x="748.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 759.875 468.8)"/>
+<rect x="736.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 747.5 454.85)"/>
+<text x="747.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="747.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S09</text>
+<rect x="789.0" y="419.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="785.0" y="414.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="787.0" y1="417.8" x2="858.0" y2="417.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="798.875" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 810.125 468.8)"/>
+<rect x="823.625" y="460.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 834.875 468.8)"/>
+<rect x="811.25" y="446.975" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 822.5 454.85)"/>
+<text x="822.5" y="434.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="822.5" y="450.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S10</text>
+<rect x="114.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="110.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="112.0" y1="562.8" x2="183.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="123.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 135.125 613.8)"/>
+<rect x="148.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 159.875 613.8)"/>
+<rect x="136.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 147.5 599.8499999999999)"/>
+<text x="147.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="147.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S11</text>
+<rect x="189.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="185.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="187.0" y1="562.8" x2="258.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="198.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 210.125 613.8)"/>
+<rect x="223.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 234.875 613.8)"/>
+<rect x="211.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 222.5 599.8499999999999)"/>
+<text x="222.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="222.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S12</text>
+<rect x="264.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="260.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="262.0" y1="562.8" x2="333.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="273.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 285.125 613.8)"/>
+<rect x="298.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 309.875 613.8)"/>
+<rect x="286.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 297.5 599.8499999999999)"/>
+<text x="297.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="297.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S13</text>
+<rect x="339.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="335.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="337.0" y1="562.8" x2="408.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="348.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 360.125 613.8)"/>
+<rect x="373.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 384.875 613.8)"/>
+<rect x="361.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 372.5 599.8499999999999)"/>
+<text x="372.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="372.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S14</text>
+<rect x="414.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="410.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="412.0" y1="562.8" x2="483.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="423.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 435.125 613.8)"/>
+<rect x="448.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 459.875 613.8)"/>
+<rect x="436.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 447.5 599.8499999999999)"/>
+<text x="447.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="447.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S15</text>
+<rect x="489.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="485.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="487.0" y1="562.8" x2="558.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="498.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 510.125 613.8)"/>
+<rect x="523.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 534.875 613.8)"/>
+<rect x="511.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 522.5 599.8499999999999)"/>
+<text x="522.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="522.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S16</text>
+<rect x="564.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="560.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="562.0" y1="562.8" x2="633.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="573.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 585.125 613.8)"/>
+<rect x="598.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 609.875 613.8)"/>
+<rect x="586.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 597.5 599.8499999999999)"/>
+<text x="597.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="597.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S17</text>
+<rect x="639.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="635.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="637.0" y1="562.8" x2="708.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="648.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 660.125 613.8)"/>
+<rect x="673.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 684.875 613.8)"/>
+<rect x="661.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 672.5 599.8499999999999)"/>
+<text x="672.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="672.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S18</text>
+<rect x="714.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="710.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="712.0" y1="562.8" x2="783.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="723.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 735.125 613.8)"/>
+<rect x="748.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 759.875 613.8)"/>
+<rect x="736.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 747.5 599.8499999999999)"/>
+<text x="747.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="747.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S19</text>
+<rect x="789.0" y="564.8" width="75.0" height="75.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="785.0" y="559.8" width="75.0" height="75.0" rx="3" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1.6"/>
+<line x1="787.0" y1="562.8" x2="858.0" y2="562.8" stroke="#ddb87e" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="798.875" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 810.125 613.8)"/>
+<rect x="823.625" y="605.925" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 834.875 613.8)"/>
+<rect x="811.25" y="591.9749999999999" width="22.5" height="15.749999999999998" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 822.5 599.8499999999999)"/>
+<text x="822.5" y="579.8" font-size="14.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خيل</text>
+<text x="822.5" y="595.55" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">S20</text>
+<rect x="114.0" y="639.8" width="140.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="110.0" y="634.8" width="140.0" height="80.0" rx="3" fill="url(#grad_7a9bbd)" stroke="#5c7994" stroke-width="1.6"/>
+<line x1="112.0" y1="637.8" x2="248.0" y2="637.8" stroke="#8fadcc" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="134.0" y="668.832" width="34" height="32.736000000000004" rx="3" fill="#e9e2d2" stroke="#8a7f68" stroke-width="1"/>
+<rect x="136.0" y="670.832" width="30" height="9.166080000000003" rx="2.5" fill="#ffffff" stroke="#c9c0ab" stroke-width="0.6"/>
+<rect x="134.0" y="692.40192" width="34" height="9.166080000000003" rx="2.5" fill="#7a5c46" fill-opacity="0.55"/>
+<rect x="192.0" y="668.832" width="34" height="32.736000000000004" rx="3" fill="#e9e2d2" stroke="#8a7f68" stroke-width="1"/>
+<rect x="194.0" y="670.832" width="30" height="9.166080000000003" rx="2.5" fill="#ffffff" stroke="#c9c0ab" stroke-width="0.6"/>
+<rect x="192.0" y="692.40192" width="34" height="9.166080000000003" rx="2.5" fill="#7a5c46" fill-opacity="0.55"/>
+<text x="180.0" y="655.8" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة نوم عمال</text>
+<text x="180.0" y="672.4" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">WB01</text>
+<rect x="254.0" y="639.8" width="70.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="250.0" y="634.8" width="70.0" height="80.0" rx="3" fill="url(#grad_7a9bbd)" stroke="#5c7994" stroke-width="1.6"/>
+<line x1="252.0" y1="637.8" x2="318.0" y2="637.8" stroke="#8fadcc" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="285.0" y="667.0999999999999" font-size="9.5" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">مطبخ العمال</text>
+<text x="285.0" y="679.025" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">WK01</text>
+<rect x="324.0" y="639.8" width="40.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="320.0" y="634.8" width="40.0" height="80.0" rx="3" fill="url(#grad_7a9bbd)" stroke="#5c7994" stroke-width="1.6"/>
+<line x1="322.0" y1="637.8" x2="358.0" y2="637.8" stroke="#8fadcc" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="340.0" y="677.775" font-size="8.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">WBTH01</text>
+<rect x="364.0" y="639.8" width="80.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="360.0" y="634.8" width="80.0" height="80.0" rx="3" fill="url(#grad_b8894f)" stroke="#8f6a3a" stroke-width="1.6"/>
+<line x1="362.0" y1="637.8" x2="438.0" y2="637.8" stroke="#cc9d63" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="374.8" y="684.0" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 386.8 692.4)"/>
+<rect x="401.2" y="684.0" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 413.2 692.4)"/>
+<rect x="388.0" y="669.12" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 400.0 677.52)"/>
+<text x="400.0" y="649.3" font-size="8.5" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">غرفة خيل كبيرة</text>
+<text x="400.0" y="660.375" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">P01</text>
+<rect x="444.0" y="639.8" width="70.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="440.0" y="634.8" width="70.0" height="80.0" rx="3" fill="url(#grad_c17a5c)" stroke="#96593f" stroke-width="1.6"/>
+<line x1="442.0" y1="637.8" x2="508.0" y2="637.8" stroke="#d4906f" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="475.0" y="667.0999999999999" font-size="8.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">غرفة مصاب خيل</text>
+<text x="475.0" y="677.7499999999999" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">SP01</text>
+<rect x="514.0" y="639.8" width="80.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="510.0" y="634.8" width="80.0" height="80.0" rx="3" fill="url(#grad_8c9a5e)" stroke="#6b7845" stroke-width="1.6"/>
+<line x1="512.0" y1="637.8" x2="588.0" y2="637.8" stroke="#a2b073" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="550.0" y="667.0999999999999" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة علف</text>
+<text x="550.0" y="683.6999999999999" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">FD01</text>
+<rect x="594.0" y="639.8" width="120.0" height="60.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="590.0" y="634.8" width="120.0" height="60.0" rx="3" fill="url(#grad_9a9690)" stroke="#77746f" stroke-width="1.6"/>
+<line x1="592.0" y1="637.8" x2="708.0" y2="637.8" stroke="#aeaaa4" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="650.0" y="657.0999999999999" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">غرفة خدمة</text>
+<text x="650.0" y="673.6999999999999" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">SV01</text>
+<rect x="714.0" y="639.8" width="70.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="710.0" y="634.8" width="70.0" height="80.0" rx="3" fill="url(#grad_c17a5c)" stroke="#96593f" stroke-width="1.6"/>
+<line x1="712.0" y1="637.8" x2="778.0" y2="637.8" stroke="#d4906f" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="745.0" y="667.0999999999999" font-size="8.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">غرفة مصاب خيل</text>
+<text x="745.0" y="677.7499999999999" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">SP02</text>
+<rect x="784.0" y="639.8" width="80.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="780.0" y="634.8" width="80.0" height="80.0" rx="3" fill="url(#grad_b8894f)" stroke="#8f6a3a" stroke-width="1.6"/>
+<line x1="782.0" y1="637.8" x2="858.0" y2="637.8" stroke="#cc9d63" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="794.8" y="684.0" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(-8 806.8 692.4)"/>
+<rect x="821.2" y="684.0" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(0 833.2 692.4)"/>
+<rect x="808.0" y="669.12" width="24.0" height="16.799999999999997" rx="1.5" fill="#c9a53f" stroke="#8f7527" stroke-width="0.6" transform="rotate(8 820.0 677.52)"/>
+<text x="820.0" y="649.3" font-size="8.5" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">غرفة خيل كبيرة</text>
+<text x="820.0" y="660.375" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">P02</text>
+<rect x="154.0" y="215.0" width="160.0" height="164.8" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="150.0" y="210.0" width="160.0" height="164.8" rx="3" fill="url(#grad_6b4632)" stroke="#4e3222" stroke-width="1.6"/>
+<line x1="152.0" y1="213.0" x2="308.0" y2="213.0" stroke="#82593f" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="180.4" y="259.44" width="99.2" height="72.51200000000001" rx="4" fill="#8a3f34" fill-opacity="0.85"/>
+<rect x="186.4" y="265.44" width="87.2" height="60.512000000000015" rx="3" fill="none" stroke="#d9b775" stroke-width="1.2"/>
+<rect x="161.4" y="244.44000000000003" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<rect x="280.6" y="244.44000000000003" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<rect x="161.4" y="332.95200000000006" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<rect x="280.6" y="332.95200000000006" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<rect x="221.0" y="228.9504" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<rect x="221.0" y="348.44160000000005" width="18" height="14" rx="4" fill="#6b4632" stroke="#3f2a1c" stroke-width="0.8"/>
+<text x="230.0" y="231.0" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">مجلس رجال</text>
+<text x="230.0" y="247.6" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">MJ01</text>
+<rect x="314.0" y="215.0" width="35.2" height="35.2" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="310.0" y="210.0" width="35.2" height="35.2" rx="3" fill="url(#grad_8d7b68)" stroke="#6c5c4c" stroke-width="1.6"/>
+<line x1="312.0" y1="213.0" x2="343.2" y2="213.0" stroke="#a08d78" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="327.6" y="230.575" font-size="8.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">MWC01</text>
+<rect x="364.0" y="215.0" width="160.0" height="164.8" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="360.0" y="210.0" width="160.0" height="164.8" rx="3" fill="url(#grad_e8dcc0)" stroke="#c9bb9c" stroke-width="1.6"/>
+<line x1="362.0" y1="213.0" x2="518.0" y2="213.0" stroke="#f2e9d4" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="440.0" y="284.7" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">مجلس خارجي</text>
+<text x="440.0" y="301.3" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">OSA01</text>
+<rect x="564.0" y="215.0" width="96.6" height="75.19999999999999" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="560.0" y="210.0" width="96.6" height="75.19999999999999" rx="3" fill="url(#grad_5c6f45)" stroke="#465432" stroke-width="1.6"/>
+<line x1="562.0" y1="213.0" x2="654.6" y2="213.0" stroke="#71835a" stroke-width="1.5" stroke-opacity="0.65"/>
+<rect x="591.3" y="241.99008" width="34" height="30.771839999999997" rx="3" fill="#e9e2d2" stroke="#8a7f68" stroke-width="1"/>
+<rect x="593.3" y="243.99008" width="30" height="8.6161152" rx="2.5" fill="#ffffff" stroke="#c9c0ab" stroke-width="0.6"/>
+<rect x="591.3" y="264.1458048" width="34" height="8.6161152" rx="2.5" fill="#7a5c46" fill-opacity="0.55"/>
+<text x="608.3" y="227.0" font-size="11.0" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#f5efe0">غرفة نوم خاصة</text>
+<text x="608.3" y="240.2" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#f5efe0">PBR01</text>
+<rect x="564.0" y="290.2" width="96.6" height="40.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="560.0" y="285.2" width="96.6" height="40.0" rx="3" fill="url(#grad_8d7b68)" stroke="#6c5c4c" stroke-width="1.6"/>
+<line x1="562.0" y1="288.2" x2="654.6" y2="288.2" stroke="#a08d78" stroke-width="1.5" stroke-opacity="0.65"/>
+<text x="608.3" y="299.25" font-size="10" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">حمام خاص</text>
+<text x="608.3" y="310.725" font-size="8.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">PBTH01</text>
+<rect x="634.0" y="125.0" width="220.0" height="80.0" rx="3" fill="#000000" fill-opacity="0.22" filter="url(#softblur)"/>
+<rect x="630.0" y="120.0" width="220.0" height="80.0" rx="3" fill="url(#grad_a8a49c)" stroke="#84807a" stroke-width="1.6"/>
+<line x1="632.0" y1="123.0" x2="848.0" y2="123.0" stroke="#bab6ae" stroke-width="1.5" stroke-opacity="0.65"/>
+<g><rect x="639.9" y="164.0" width="35.2" height="27.200000000000003" rx="4" fill="#5a6472" stroke="#2c323a" stroke-width="0.8"/><rect x="647.644" y="155.84" width="19.712000000000003" height="14.960000000000003" rx="3" fill="#8ea3b8" stroke="#2c323a" stroke-width="0.7"/><circle cx="647.644" cy="191.2" r="2.6" fill="#1c1c1c"/><circle cx="667.356" cy="191.2" r="2.6" fill="#1c1c1c"/></g>
+<g><rect x="694.9" y="164.0" width="35.2" height="27.200000000000003" rx="4" fill="#5a6472" stroke="#2c323a" stroke-width="0.8"/><rect x="702.644" y="155.84" width="19.712000000000003" height="14.960000000000003" rx="3" fill="#8ea3b8" stroke="#2c323a" stroke-width="0.7"/><circle cx="702.644" cy="191.2" r="2.6" fill="#1c1c1c"/><circle cx="722.356" cy="191.2" r="2.6" fill="#1c1c1c"/></g>
+<g><rect x="749.9" y="164.0" width="35.2" height="27.200000000000003" rx="4" fill="#5a6472" stroke="#2c323a" stroke-width="0.8"/><rect x="757.644" y="155.84" width="19.712000000000003" height="14.960000000000003" rx="3" fill="#8ea3b8" stroke="#2c323a" stroke-width="0.7"/><circle cx="757.644" cy="191.2" r="2.6" fill="#1c1c1c"/><circle cx="777.356" cy="191.2" r="2.6" fill="#1c1c1c"/></g>
+<g><rect x="804.9" y="164.0" width="35.2" height="27.200000000000003" rx="4" fill="#5a6472" stroke="#2c323a" stroke-width="0.8"/><rect x="812.644" y="155.84" width="19.712000000000003" height="14.960000000000003" rx="3" fill="#8ea3b8" stroke="#2c323a" stroke-width="0.7"/><circle cx="812.644" cy="191.2" r="2.6" fill="#1c1c1c"/><circle cx="832.356" cy="191.2" r="2.6" fill="#1c1c1c"/></g>
+<text x="740.0" y="141.0" font-size="15" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="600" fill="#2a2018">بركنج</text>
+<text x="740.0" y="157.6" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">PK01</text>
+<g><ellipse cx="132.0" cy="196.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="128.0" y="192.0" width="4" height="10" fill="#6b4a30"/><circle cx="130.0" cy="185.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="124.8" cy="188.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="135.46" cy="188.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="842.0" cy="196.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="838.0" y="192.0" width="4" height="10" fill="#6b4a30"/><circle cx="840.0" cy="185.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="834.8" cy="188.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="845.46" cy="188.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="332.0" cy="362.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="328.0" y="358.0" width="4" height="10" fill="#6b4a30"/><circle cx="330.0" cy="351.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="324.8" cy="354.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="335.46" cy="354.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="682.0" cy="362.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="678.0" y="358.0" width="4" height="10" fill="#6b4a30"/><circle cx="680.0" cy="351.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="674.8" cy="354.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="685.46" cy="354.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="122.0" cy="722.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="118.0" y="718.0" width="4" height="10" fill="#6b4a30"/><circle cx="120.0" cy="711.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="114.8" cy="714.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="125.46" cy="714.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="852.0" cy="722.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="848.0" y="718.0" width="4" height="10" fill="#6b4a30"/><circle cx="850.0" cy="711.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="844.8" cy="714.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="855.46" cy="714.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="487.0" cy="722.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="483.0" y="718.0" width="4" height="10" fill="#6b4a30"/><circle cx="485.0" cy="711.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="479.8" cy="714.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="490.46" cy="714.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="122.0" cy="1092.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="118.0" y="1088.0" width="4" height="10" fill="#6b4a30"/><circle cx="120.0" cy="1081.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="114.8" cy="1084.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="125.46" cy="1084.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<g><ellipse cx="852.0" cy="1092.0" rx="13" ry="6.5" fill="#000000" fill-opacity="0.15"/><rect x="848.0" y="1088.0" width="4" height="10" fill="#6b4a30"/><circle cx="850.0" cy="1081.55" r="9.36" fill="#7a9556" fill-opacity="0.92"/><circle cx="844.8" cy="1084.8" r="7.15" fill="#8ba764" fill-opacity="0.88"/><circle cx="855.46" cy="1084.15" r="6.5" fill="#6a8548" fill-opacity="0.9"/></g>
+<text x="110" y="1144.0" font-size="14" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="800" fill="#2a2018">LEGEND</text>
+<rect x="110" y="1153.0" width="16" height="13" rx="2" fill="url(#grad_c9a066)" stroke="#9c7a4a" stroke-width="1"/>
+<text x="132" y="1164.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Standard Horse Stall — 3.75×3.75 m (×20)</text>
+<rect x="110" y="1172.0" width="16" height="13" rx="2" fill="url(#grad_b8894f)" stroke="#8f6a3a" stroke-width="1"/>
+<text x="132" y="1183.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Premium Horse Stall — 4.00×4.00 m (×2)</text>
+<rect x="110" y="1191.0" width="16" height="13" rx="2" fill="url(#grad_c17a5c)" stroke="#96593f" stroke-width="1"/>
+<text x="132" y="1202.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Veterinary / Isolation Room ('mesab', owner-confirmed) — 3.50×4.00 m (×2)</text>
+<rect x="110" y="1210.0" width="16" height="13" rx="2" fill="url(#grad_8c9a5e)" stroke="#6b7845" stroke-width="1"/>
+<text x="132" y="1221.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Feed Room — 4.00×4.00 m</text>
+<rect x="110" y="1229.0" width="16" height="13" rx="2" fill="url(#grad_9a9690)" stroke="#77746f" stroke-width="1"/>
+<text x="132" y="1240.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Service Room — 6.00×3.00 m (owner-confirmed)</text>
+<rect x="110" y="1248.0" width="16" height="13" rx="2" fill="url(#grad_7a9bbd)" stroke="#5c7994" stroke-width="1"/>
+<text x="132" y="1259.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Worker Accommodation</text>
+<rect x="490" y="1153.0" width="16" height="13" rx="2" fill="url(#grad_6b4632)" stroke="#4e3222" stroke-width="1"/>
+<text x="512" y="1164.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Men's Majlis — 8.00×8.24 m</text>
+<rect x="490" y="1172.0" width="16" height="13" rx="2" fill="url(#grad_5c6f45)" stroke="#465432" stroke-width="1"/>
+<text x="512" y="1183.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Private Bedroom Suite</text>
+<rect x="490" y="1191.0" width="16" height="13" rx="2" fill="url(#grad_e8dcc0)" stroke="#c9bb9c" stroke-width="1"/>
+<text x="512" y="1202.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Outdoor Majlis / Sitting Terrace</text>
+<rect x="490" y="1210.0" width="16" height="13" rx="2" fill="url(#grad_d8c9a0)" stroke="#b8a878" stroke-width="1"/>
+<text x="512" y="1221.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Paddock — 2× equal, 318.9 m² each</text>
+<rect x="490" y="1229.0" width="16" height="13" rx="2" fill="url(#grad_a8a49c)" stroke="#84807a" stroke-width="1"/>
+<text x="512" y="1240.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Parking Apron — 4 bays</text>
+<text x="110" y="1420.0" font-size="9.5" font-family="Helvetica, Arial, sans-serif" fill="#a33" font-weight="700">Concept plan only. Not for construction or permit use until reviewed and approved by a licensed local</text>
+<text x="110" y="1434.0" font-size="9.5" font-family="Helvetica, Arial, sans-serif" fill="#a33" font-weight="700">architect/engineer, MEP/civil engineer, and fire/life-safety consultant.</text>
+</svg>
