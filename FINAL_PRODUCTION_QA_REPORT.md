@@ -1,3 +1,7 @@
+> **SUPERSEDED (internal history only).** The owner rejected the software-rasterized 3D renders this document treats as a deliverable. The current, honest position is in `OWNER_REJECTION_REVIEW.md` and `FINAL_OWNER_ACCEPTANCE_QA.md`: flat renders are removed from the client package, and photoreal 3D is handed off for external production (`final_package/06_CONSULTANT_HANDOFF/render_production_brief.md`). This file is retained for provenance, not as a current claim.
+
+---
+
 # Final Production QA Report — Luxury Equestrian Stable Redesign
 
 **Concept design package. Ready for licensed architectural/engineering development. Not for

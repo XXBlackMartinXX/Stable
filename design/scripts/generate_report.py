@@ -95,14 +95,6 @@ summary_lines.append(f"- {n_warn} {warn_word} disclosed openly (not hidden):")
 for w in validation["warnings"]:
     summary_lines.append(f"  - {w['warning']}" + (f" ({', '.join(w['items'])})" if w["items"] else ""))
 validation_summary = "\n".join(summary_lines)
-
-# Session-scoped SketchUp cloud download link - update after each 3D model rebuild/save_model call.
-# (The MCP save_model tool does not return a stable, non-expiring URL, so this is the latest known
-# link at the time the 3D model was last regenerated - see THREE_D_SYNC_REPORT.md for provenance.)
-SKETCHUP_DOWNLOAD_URL = ("https://api.sketchup.com/mcp/v1/sketchup/dl/cfb6760e-559d-40c7-81c4-"
-                         "643eb8e2829d/006-save/luxury_equestrian_stable_concept_finalized.skp"
-                         "?t=l-DQPeFf8O-1rVPRrAMkHg")
-
 resolved_decisions = validation.get("resolved_decisions", [])
 resolved_lines = [f"**Resolved owner decisions ({len(resolved_decisions)}):**"]
 for d in resolved_decisions:
@@ -126,7 +118,6 @@ context = {
     "VALIDATION_SUMMARY": validation_summary,
     "RESOLVED_DECISIONS_LIST": resolved_decisions_list,
     "UNRESOLVED_COUNT": str(len(resolved_decisions)),
-    "SKETCHUP_DOWNLOAD_URL": SKETCHUP_DOWNLOAD_URL,
 }
 
 template = (SCRIPT_DIR / "report_template.md").read_text()

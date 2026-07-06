@@ -1,0 +1,14 @@
+element,material_direction,base_colour_hint,finish,notes
+Stall / wing walls,Warm sandstone / limestone render,#d9cbb0,matte,Bronze accent trim on premium stalls
+Stable doors,Solid walnut timber Dutch doors,#8c5a34,satin,Powder-coated steel yoke bars
+Premium stall trim,Bronze metal accent,#8a6a3a,brushed,Distinguishes P01/P02
+Majlis walls,Deep espresso plaster,#4e3222,matte,Feature interior tone
+Private suite walls,Olive-toned plaster,#5c6f45,matte,Restrained
+Roofs,Bronze standing-seam metal,#3a2e22,satin metal,Consistent across all structures
+Paddock fencing,Dark walnut timber post-and-rail,#4a3626,satin,Two rail bands
+Paddock ground,Raked / textured sand,#d4c49f,rough,Visible rake lines
+Terrace / majlis floor,Warm limestone paving,#e0d6c4,honed,
+Motor court paving,Limestone paving (guest),#e6ddca,honed,
+Service lane paving,Utilitarian grey paving,#9a968e,broom,Materially signals service zone
+Landscape,Native drought-tolerant planting + shade trees,#6f8a4a,natural,Realistic canopies; NO cube trees
+Lighting,Warm 2700K low-glare bollards,#ffd9a0,warm,Uplight majlis facade only

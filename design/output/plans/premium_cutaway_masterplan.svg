@@ -19,14 +19,24 @@
 <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#faf5e9"/><stop offset="100%" stop-color="#f0e8d4"/></linearGradient>
 </defs>
 <rect x="0" y="0" width="1140.0" height="1450.0" fill="url(#bgGrad)"/>
+<rect x="26" y="26" width="1088.0" height="1398.0" fill="none" stroke="#2a2018" stroke-width="2.5"/>
+<rect x="33" y="33" width="1074.0" height="1384.0" fill="none" stroke="#b7a074" stroke-width="1"/>
 <text x="110" y="42" font-size="26" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="800" fill="#2a2018">LUXURY EQUESTRIAN STABLE</text>
-<text x="110" y="66" font-size="15" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#6b5d47">Premium Concept Masterplan  —  Finalized Validated Layout</text>
-<text x="110" y="92" font-size="17" text-anchor="start" font-family="Noto Sans Arabic" font-weight="600" fill="#6b5d47">مخطط عام فاخر، تصميم معتمد ونهائي</text>
+<text x="110" y="66" font-size="15" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#6b5d47">Concept Masterplan  ·  Validated Schematic Layout</text>
+<text x="110" y="92" font-size="17" text-anchor="start" font-family="Noto Sans Arabic" font-weight="600" fill="#6b5d47">مخطط عام، تصميم معتمد ونهائي</text>
+<line x1="110" y1="102" x2="910.0" y2="102" stroke="#b7a074" stroke-width="1.5"/>
+<text x="918.0" y="52" font-size="20" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="800" fill="#2a2018">MP·01</text>
+<text x="918.0" y="72" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="600" fill="#6b5d47">MASTER PLAN</text>
+<text x="918.0" y="88" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#8a7d63">SCALE 1:250 @ A1</text>
 <rect x="113" y="114" width="800.0" height="1000.0" fill="#000000" fill-opacity="0.10" filter="url(#softblur)"/>
 <rect x="110" y="110" width="800.0" height="1000.0" fill="#efe6cf" stroke="#2a2018" stroke-width="2.5"/>
 <g stroke="#2a2018" fill="#2a2018"><line x1="960.0" y1="214" x2="960.0" y2="180" stroke-width="2"/><polygon points="960.0,172 953.0,186 967.0,186"/></g>
 <text x="960.0" y="230" font-size="12" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">GATE</text>
 <text x="960.0" y="248" font-size="12" text-anchor="middle" font-family="Noto Sans Arabic" font-weight="500" fill="#6b5d47">البوابة</text>
+<circle cx="960.0" cy="490" r="24" fill="#faf5e9" stroke="#2a2018" stroke-width="1.4"/>
+<polygon points="960.0,471 953.0,493 967.0,493" fill="#8a3f34"/>
+<polygon points="960.0,508 953.0,493 967.0,493" fill="#2a2018"/>
+<text x="960.0" y="464" font-size="11" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" fill="#2a2018">N</text>
 <rect x="114.0" y="739.8" width="340.0" height="375.20000000000005" fill="#000000" fill-opacity="0.15" filter="url(#softblur)"/>
 <clipPath id="clip_PD01"><rect x="110.0" y="734.8" width="340.0" height="375.20000000000005" rx="3"/></clipPath>
 <g clip-path="url(#clip_PD01)">
@@ -461,6 +471,18 @@
 <text x="512" y="1221.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Paddock — 2× equal, 318.9 m² each</text>
 <rect x="490" y="1229.0" width="16" height="13" rx="2" fill="url(#grad_a8a49c)" stroke="#84807a" stroke-width="1"/>
 <text x="512" y="1240.0" font-size="10.5" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#2a2018">Parking Apron — 4 bays</text>
+<text x="110" y="1285.0" font-size="11" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="700" fill="#2a2018">SCALE  (metres)</text>
+<rect x="110" y="1294.0" width="200" height="9" fill="#2a2018" stroke="#2a2018" stroke-width="1"/>
+<rect x="310" y="1294.0" width="200" height="9" fill="#faf5e9" stroke="#2a2018" stroke-width="1"/>
+<rect x="510" y="1294.0" width="200" height="9" fill="#2a2018" stroke="#2a2018" stroke-width="1"/>
+<rect x="710" y="1294.0" width="200" height="9" fill="#faf5e9" stroke="#2a2018" stroke-width="1"/>
+<text x="110" y="1318.0" font-size="9.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#4a4030">0</text>
+<text x="310" y="1318.0" font-size="9.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#4a4030">10</text>
+<text x="510" y="1318.0" font-size="9.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#4a4030">20</text>
+<text x="710" y="1318.0" font-size="9.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#4a4030">30</text>
+<text x="910" y="1318.0" font-size="9.5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="500" fill="#4a4030">40</text>
+<line x1="110" y1="1378.0" x2="910.0" y2="1378.0" stroke="#b7a074" stroke-width="1"/>
+<text x="110" y="1392.0" font-size="11" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-weight="600" fill="#4a4030">Site 40.00 × 50.00 m  ·  2,000 m²    |    40 scheduled spaces    |    scheduled area 1,648.01 m² (82.4%)    |    validated schematic layout</text>
 <text x="110" y="1420.0" font-size="9.5" font-family="Helvetica, Arial, sans-serif" fill="#a33" font-weight="700">Concept plan only. Not for construction or permit use until reviewed and approved by a licensed local</text>
 <text x="110" y="1434.0" font-size="9.5" font-family="Helvetica, Arial, sans-serif" fill="#a33" font-weight="700">architect/engineer, MEP/civil engineer, and fire/life-safety consultant.</text>
 </svg>

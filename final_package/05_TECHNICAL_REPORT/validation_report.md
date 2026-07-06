@@ -1,0 +1,66 @@
+# Validation Report
+
+**Concept plan only. Not for construction or permit use.**
+
+Generated automatically from the validated coordinate model. Every check below is computed live.
+
+```
+STABLE REDESIGN - MATHEMATICAL VALIDATION REPORT
+Concept plan only. Not for construction or permit use until reviewed and approved by a licensed
+local architect/engineer, MEP/civil engineer, and fire/life-safety consultant.
+==============================================================================
+Site: 40.0 m x 50.0 m = 2000.0 m^2
+Total spaces scheduled: 40
+Total scheduled area: 1648.01 m^2
+X dimension chain sum: 40.0 m (must equal 40.00)
+Y dimension chain sum: 50.0 m (must equal 50.00)
+OVERALL STATUS: PASS
+==============================================================================
+
+PASSED CHECKS (27):
+  [PASS] Site width == 40.00 m -- SITE_WIDTH=40.0
+  [PASS] Site depth == 50.00 m -- SITE_DEPTH=50.0
+  [PASS] All spaces fit inside site boundary -- out_of_bounds=[]
+  [PASS] No overlapping spaces (parking-within-motor-court exempted) -- overlaps=[]
+  [PASS] Exactly 20 standard horse stalls -- count=20
+  [PASS] Exactly 2 premium horse stalls -- count=2
+  [PASS] Exactly 2 veterinary/isolation rooms (label confirmed: مصاب) -- count=2
+  [PASS] Exactly 2 paddocks -- count=2
+  [PASS] Exactly 1 feed room -- count=1
+  [PASS] Exactly 1 service room -- count=1
+  [PASS] All standard stalls are 3.75 x 3.75 m -- bad=[]
+  [PASS] All premium stalls are 4.00 x 4.00 m -- bad=[]
+  [PASS] Feed room is 4.00 x 4.00 m -- bad=[]
+  [PASS] Service room is 6.00 x 3.00 m (owner-confirmed, supersedes the 3.00x3.00m brief) -- bad=[]
+  [PASS] Program item present: Worker bedroom (4 workers) -- function=worker_bedroom
+  [PASS] Program item present: Worker bathroom -- function=worker_bathroom
+  [PASS] Program item present: Worker kitchen -- function=worker_kitchen
+  [PASS] Program item present: Men's majlis -- function=majlis
+  [PASS] Program item present: Men's WC -- function=mens_wc
+  [PASS] Program item present: Outdoor sitting area -- function=outdoor_sitting
+  [PASS] Program item present: Private bedroom -- function=private_bedroom
+  [PASS] Program item present: Private bathroom -- function=private_bathroom
+  [PASS] Horizontal (X) dimension chain totals exactly 40.00 m -- sum=40.0
+  [PASS] Vertical (Y) dimension chain totals exactly 50.00 m -- sum=50.0
+  [PASS] Both paddocks have identical, consistent area -- areas=[318.92]
+  [PASS] Total scheduled area does not exceed site area -- total_area=1648.01, site_area=2000.0
+  [PASS] Every space has a defined door/gate location -- missing=[]
+
+FAILED CHECKS (0):
+
+WARNINGS (1):
+  [WARN] Worker kitchen (WK01) and worker bathroom (WBTH01) were narrowed this pass (4.50->3.50m and 3.00->2.00m respectively) to fit the owner-confirmed 6.00m-wide service room into the wing band. Neither room has a source-mandated size, so this is a disclosed redesign trade-off, not an open question.
+         items: WK01, WBTH01
+
+RESOLVED OWNER DECISIONS (5):
+  [RESOLVED] Special horse rooms (SP01, SP02) confirmed as 'مصاب' - injured/veterinary isolation rooms. The CAD's alternate spelling 'مصلب' is superseded.
+         items: SP01, SP02
+  [RESOLVED] Service room (SV01) confirmed at 6.00x3.00 m, per stable 1.pdf CAD - supersedes the 3.00x3.00 m in Requirments.txt line 6.
+         items: SV01
+  [RESOLVED] Parking apron (PK01) confirmed to be kept as modeled (11.00x4.00 m, 4 bays).
+         items: PK01
+  [RESOLVED] Outdoor majlis width (OSA01) and private bathroom width (PBTH01) confirmed as modeled - no change.
+         items: OSA01, PBTH01
+  [RESOLVED] Worker bedroom (WB01) footprint and bunk layout for 4 workers confirmed as modeled - no change.
+         items: WB01
+```

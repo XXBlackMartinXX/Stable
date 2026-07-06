@@ -221,12 +221,26 @@ def build():
 
     parts.append(f'<rect x="0" y="0" width="{CANVAS_W}" height="{CANVAS_H}" fill="url(#bgGrad)"/>')
 
-    # Title block
+    # Presentation sheet frame (double rule mat) — turns a bare plan into a presentation board
+    fpad = 26
+    parts.append(f'<rect x="{fpad}" y="{fpad}" width="{CANVAS_W-2*fpad}" height="{CANVAS_H-2*fpad}" '
+                 f'fill="none" stroke="#2a2018" stroke-width="2.5"/>')
+    parts.append(f'<rect x="{fpad+7}" y="{fpad+7}" width="{CANVAS_W-2*fpad-14}" height="{CANVAS_H-2*fpad-14}" '
+                 f'fill="none" stroke="#b7a074" stroke-width="1"/>')
+
+    # Title block with accent rule
     parts.append(latin_text(MARGIN, 42, 26, "LUXURY EQUESTRIAN STABLE", anchor="start", weight="800"))
-    parts.append(latin_text(MARGIN, 66, 15, "Premium Concept Masterplan  —  Finalized Validated Layout",
+    parts.append(latin_text(MARGIN, 66, 15, "Concept Masterplan  ·  Validated Schematic Layout",
                             anchor="start", weight="500", fill="#6b5d47"))
-    parts.append(arabic_text(MARGIN, 92, 17, "مخطط عام فاخر، تصميم معتمد ونهائي", anchor="start", weight="600",
+    parts.append(arabic_text(MARGIN, 92, 17, "مخطط عام، تصميم معتمد ونهائي", anchor="start", weight="600",
                              fill="#6b5d47"))
+    parts.append(f'<line x1="{MARGIN}" y1="102" x2="{x2px(SITE_WIDTH)}" y2="102" '
+                 f'stroke="#b7a074" stroke-width="1.5"/>')
+    # Sheet reference tag (top-right of the drawing area)
+    tag_x = x2px(SITE_WIDTH) + 8
+    parts.append(latin_text(tag_x, 52, 20, "MP·01", anchor="start", weight="800", fill="#2a2018"))
+    parts.append(latin_text(tag_x, 72, 10.5, "MASTER PLAN", anchor="start", weight="600", fill="#6b5d47"))
+    parts.append(latin_text(tag_x, 88, 10.5, "SCALE 1:250 @ A1", anchor="start", weight="500", fill="#8a7d63"))
 
     # Site boundary with soft ground shadow
     bx, by = x2px(0), y2px(0)
@@ -243,6 +257,13 @@ def build():
                  f'<polygon points="{gx},{gy-18} {gx-7},{gy-4} {gx+7},{gy-4}"/></g>')
     parts.append(latin_text(gx, gy + 40, 12, "GATE", anchor="middle", weight="700"))
     parts.append(arabic_text(gx, gy + 58, 12, "البوابة", anchor="middle", weight="500", fill="#6b5d47"))
+
+    # Compass north arrow (proper, in the right margin lower down)
+    ncx, ncy = gx, y2px(19)
+    parts.append(f'<circle cx="{ncx}" cy="{ncy}" r="24" fill="#faf5e9" stroke="#2a2018" stroke-width="1.4"/>')
+    parts.append(f'<polygon points="{ncx},{ncy-19} {ncx-7},{ncy+3} {ncx+7},{ncy+3}" fill="#8a3f34"/>')
+    parts.append(f'<polygon points="{ncx},{ncy+18} {ncx-7},{ncy+3} {ncx+7},{ncy+3}" fill="#2a2018"/>')
+    parts.append(latin_text(ncx, ncy - 26, 11, "N", anchor="middle", weight="800"))
 
     # Rooms
     DRAW_FIRST = {"arrival_court", "service_lane", "service_yard", "paddock"}
@@ -360,6 +381,29 @@ def build():
         parts.append(f'<rect x="{lx}" y="{lyy-11}" width="16" height="13" rx="2" fill="url(#grad_{base.strip(chr(35))})" '
                      f'stroke="{shadow}" stroke-width="1"/>')
         parts.append(latin_text(lx + 22, lyy, 10.5, label, anchor="start", weight="500"))
+
+    # Graphic scale bar (true plan scale, 0–40 m in 10 m increments), left-aligned below the legend
+    sb_x = MARGIN
+    sb_y = ly + 150
+    seg = 10 * SCALE  # 10 m per segment at plan scale (200 px)
+    parts.append(latin_text(sb_x, sb_y - 9, 11, "SCALE  (metres)", anchor="start", weight="700"))
+    for i in range(4):
+        fill = "#2a2018" if i % 2 == 0 else "#faf5e9"
+        parts.append(f'<rect x="{sb_x + i*seg}" y="{sb_y}" width="{seg}" height="9" '
+                     f'fill="{fill}" stroke="#2a2018" stroke-width="1"/>')
+    for i in range(5):
+        parts.append(latin_text(sb_x + i*seg, sb_y + 24, 9.5, str(i*10), anchor="middle",
+                                weight="500", fill="#4a4030"))
+
+    # Project-info footer strip (elegant, single line) above the disclaimer
+    info_y = CANVAS_H - 58
+    parts.append(f'<line x1="{MARGIN}" y1="{info_y-14}" x2="{x2px(SITE_WIDTH)}" y2="{info_y-14}" '
+                 f'stroke="#b7a074" stroke-width="1"/>')
+    total_area = sum(s["area_m2"] for s in spaces)
+    info = (f"Site 40.00 × 50.00 m  ·  2,000 m²    |    40 scheduled spaces    |    "
+            f"scheduled area {total_area:,.2f} m² ({total_area/2000*100:.1f}%)    |    "
+            f"validated schematic layout")
+    parts.append(latin_text(MARGIN, info_y, 11, info, anchor="start", weight="600", fill="#4a4030"))
 
     # Disclaimer
     import textwrap

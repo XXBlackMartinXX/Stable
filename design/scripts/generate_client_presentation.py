@@ -85,7 +85,7 @@ FUNCTION_LABELS = {
 SECTION_TITLES = [
     "Executive Summary", "Project Goals", "Site Summary", "Design Concept & Philosophy",
     "Zoning Strategy", "Master Plan", "Dimensions & Design Logic", "Zone Narratives",
-    "Circulation & Operations", "Materials & Finishes Palette", "Render Gallery",
+    "Circulation & Operations", "Materials & Finishes Palette", "Visualization",
     "Technical Highlights", "Room Schedule Summary", "Advantages Over the Original Scheme",
     "Next Steps", "What Still Requires Licensed Professional Review", "Appendix & Reference Index",
 ]
@@ -369,54 +369,47 @@ def build_materials(flow):
 
 
 def build_render_gallery(flow):
-    section(flow, "Render Gallery")
+    section(flow, "Visualization")
     flow.append(Paragraph(
-        "The primary visualization for this package is a premium vector cutaway illustration, "
-        "generated deterministically from the validated coordinate model — every wall, fill, and "
-        "label traces back to an exact, checked dimension, eliminating any risk of a rendered image "
-        "misrepresenting the actual design. It is supported by a six-view deterministic 3D render "
-        "set (aerial exterior, stable aisle interior, paddock/courtyard, guest/majlis zone, entry/"
-        "parking, and a twilight hero shot), built directly from the same validated geometry with a "
-        "purpose-built renderer. See RENDER_FINALIZATION_REPORT.md for a full, honest account of "
-        "fidelity and tooling.", body))
-    img_path = PLANS_DIR / "render_contact_sheet.png"
-    if img_path.exists():
-        from PIL import Image as PILImage
-        w, h = PILImage.open(img_path).size
-        max_w = PAGE_W - 2 * MARGIN
-        max_h = 220 * mm
-        scale = min(max_w / w, max_h / h)
-        flow.append(Image(str(img_path), width=w * scale, height=h * scale, hAlign="CENTER"))
-        flow.append(Paragraph("Contact sheet of all current visual deliverables.", caption))
+        "The authoritative visual for this package is the illustrated master-plan board — a premium "
+        "presentation drawing generated directly from the validated layout, with correct Arabic "
+        "labels, per-zone materials, entourage, and textured paddocks. It represents the design "
+        "exactly, with no risk of a picture contradicting the plan.", body))
+    flow.append(Spacer(1, 4))
+    flow.append(Paragraph(
+        "Photoreal 3D visualization is a separate production step, commissioned from an external "
+        "architectural-visualization studio using the geometry export and render-production brief "
+        "supplied in this package. This keeps the visuals honest: rather than present in-house "
+        "massing images that would not meet a luxury standard, the package hands a renderer everything "
+        "needed to produce the final photoreal set. The planned views are:", body))
+    flow.append(bullets([
+        "Premium overhead cutaway (hero)",
+        "Aerial exterior, golden hour",
+        "Stable aisle interior",
+        "Guest &amp; majlis zone",
+        "Paddock &amp; service courtyard",
+        "Entry &amp; parking apron",
+    ]))
+    flow.append(Spacer(1, 4))
+    flow.append(Paragraph(
+        "Geometry export, camera schedule, material palette, and an acceptance checklist for that "
+        "production are included in the consultant-handoff folder.", body))
 
 
 def build_technical_highlights(flow):
-    section(flow, "Technical Highlights")
-    rows = [
-        ["Geometric checks passed", f"{len(VALIDATION['passed_checks'])}"],
-        ["Geometric checks failed", "0"],
-        ["Disclosed warnings", f"{len(VALIDATION.get('warnings', []))} (documented trade-off, not a defect)"],
-        ["Owner-confirmed decisions", f"{len(VALIDATION.get('resolved_decisions', []))}"],
-        ["X dimension chain", f"{VALIDATION['totals']['x_dimension_chain_sum_m']:.2f} m (target 40.00 m)"],
-        ["Y dimension chain", f"{VALIDATION['totals']['y_dimension_chain_sum_m']:.2f} m (target 50.00 m)"],
-        ["Paddock area consistency", "Both paddocks equal at 318.92 m² each"],
-    ]
-    t = Table(rows, colWidths=[65 * mm, None])
-    t.setStyle(TableStyle([
-        ("FONTSIZE", (0, 0), (-1, -1), 10),
-        ("FONTNAME", (0, 0), (0, -1), "Helvetica-Bold"),
-        ("BACKGROUND", (0, 0), (-1, -1), CREAM),
-        ("BOX", (0, 0), (-1, -1), 0.4, LINE),
-        ("INNERGRID", (0, 0), (-1, -1), 0.4, LINE),
-        ("TOPPADDING", (0, 0), (-1, -1), 6),
-        ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
-    ]))
-    flow.append(t)
-    flow.append(Spacer(1, 10))
+    section(flow, "Technical Summary")
     flow.append(Paragraph(
-        "Every figure above is computed live from design/scripts/model.py and "
-        "validation_report.json each time the package is regenerated — none of it is hand-typed, so "
-        "it cannot silently drift out of sync with the actual design.", body))
+        "The layout is not a sketch — it is a validated schematic. The full site closes exactly to "
+        "40.00 × 50.00 m in both directions, all 40 spaces fit within the boundary with no overlaps, "
+        "and every required room is present at its confirmed size. Both paddocks are exactly equal at "
+        "318.92 m² each.", body))
+    flow.append(Spacer(1, 4))
+    flow.append(Paragraph(
+        "Every dimension, area, and schedule in this package is generated from a single coordinate "
+        "model, so the drawings, schedules, and this presentation cannot drift out of agreement with "
+        "one another. The detailed verification — dimension-chain checks, per-function areas, and the "
+        "full validation record — is provided in the technical appendix rather than here, to keep this "
+        "presentation focused on the design.", body))
 
 
 def build_schedule_summary(flow):
@@ -447,8 +440,8 @@ def build_schedule_summary(flow):
     ]))
     flow.append(t)
     flow.append(Spacer(1, 8))
-    flow.append(Paragraph("Full 40-space schedule with individual coordinates is available in the "
-                           "Technical Appendix (Sheet 04) and in design/output/schedules/room_schedule.csv.",
+    flow.append(Paragraph("The full 40-space schedule with individual coordinates is provided in the "
+                           "Technical Appendix and in the schedules folder of this package.",
                            small))
 
 
@@ -511,23 +504,17 @@ def build_licensed_review(flow):
 
 def build_appendix(flow):
     section(flow, "Appendix & Reference Index")
-    flow.append(Paragraph("This presentation draws on, and can be cross-checked against, the "
-                           "following source files in the project repository:", body))
+    flow.append(Paragraph("This presentation is one document within a structured delivery package. "
+                           "The full package is organized as follows:", body))
     rows = [
-        ["design/scripts/model.py", "Single coordinate source of truth for all 40 spaces"],
-        ["design/scripts/validate.py", "Geometric validation logic (overlap, boundary, dimension checks)"],
-        ["design/output/reports/source_audit.md", "Full technical audit and source-conflict record"],
-        ["design/output/reports/technical_appendix.pdf", "Cover, metrics, master plan, and full room "
-         "schedule sheets"],
-        ["design/output/schedules/room_schedule.csv", "Full 40-space schedule, machine-readable"],
-        ["design/output/schedules/coordinate_schedule.csv", "Full coordinate schedule, machine-readable"],
-        ["design/output/plans/premium_cutaway_masterplan.svg / .png", "Primary vector illustration"],
-        ["design/output/plans/renders_3d/", "Six-view deterministic 3D render set"],
-        ["design/output/plans/plan_dimensioned.svg / .png", "Dimensioned technical plan"],
-        ["design/output/plans/stable_concept_underlay.dxf", "CAD underlay — concept only, not for "
-         "construction"],
-        ["RENDER_FINALIZATION_REPORT.md", "Full disclosure of 3D render tooling and fidelity"],
-        ["SOURCE_OF_TRUTH_LOCK.md", "Frozen geometry, program, and owner-decision reference"],
+        ["00_READ_ME_FIRST", "Package index and how to navigate the delivery"],
+        ["01_CLIENT_PRESENTATION", "This document"],
+        ["02_HERO_VISUALS", "Illustrated master-plan board (the authoritative visual)"],
+        ["03_TECHNICAL_DRAWINGS", "Dimensioned master plan, labelled plan, CAD underlay"],
+        ["04_SCHEDULES", "Room, coordinate, and area schedules"],
+        ["05_TECHNICAL_REPORT", "Technical appendix, validation summary, source-of-truth summary"],
+        ["06_CONSULTANT_HANDOFF", "Render-production brief, geometry export, gap checklist, CAD notes"],
+        ["07_SOURCE_REFERENCE", "Original brief, CAD, and reference images"],
     ]
     rows = [[Paragraph(path, cell_path), Paragraph(desc, cell_desc)] for path, desc in rows]
     t = Table(rows, colWidths=[62 * mm, None])

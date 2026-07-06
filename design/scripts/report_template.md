@@ -331,51 +331,31 @@ A calm, materials-first luxury language — proportion and shade rhythm rather t
   drawing above (Shapely for overlap/geometry checks, ezdxf for DXF, cairosvg for PNG rasterization,
   and this report's own numeric tables — all genuinely run, not simulated or hand-typed).
 
-## 16. 3D / Render Deliverables
+## 16. Visualization & 3D Render Strategy
 
-**3D massing model generated from finalized validated 2D coordinate model. Concept visualization
-only — not for construction.**
+**Concept visualization only — not for construction.**
 
-A real 3D massing model was built directly from the finalized, validated coordinates above using
-the Trimble SketchUp MCP connector (not a text-only "render prompt" — actual SketchUp geometry,
-componentized where rooms repeat: 20 standard stalls share one component definition, fence posts
-and landscape trees are componentized and arrayed). This model was regenerated after the owner-
-confirmation pass and reflects the current `model.py` exactly — it is not stale.
+The authoritative visual deliverable is the **illustrated master-plan board**
+(`premium_cutaway_masterplan.png`): a premium presentation drawing generated directly from the
+validated coordinate model, with correct Arabic labels, per-zone materials, entourage, and textured
+paddocks. It represents the design exactly and carries no risk of a picture contradicting the plan.
 
-- **File:** `Luxury_Equestrian_Stable_Concept_Finalized.skp` was built in a SketchUp MCP cloud
-  session during an earlier pass. The connector's `save_model` tool only ever returns a
-  session-scoped download link, and that session has since ended — the link recorded in an earlier
-  revision of this report (`{{SKETCHUP_DOWNLOAD_URL}}`) is **expired and not usable**; it is kept
-  here only as provenance of which build produced the static images below, not as a live download.
-  This environment's outbound network policy also blocks `api.sketchup.com`, so the `.skp` itself
-  could never be copied into this repository in any pass.
-- **Static renders (included in this repo, current):** `design/output/plans/aerial_3d_render.png`,
-  `sketchup_thumbnail.png`, plus the deterministic custom-rendered perspective set added in the
-  render-finalization pass — see `RENDER_FINALIZATION_REPORT.md` for the authoritative, current list
-  of every 3D view, the tool used to produce each one, and honest notes on fidelity. This section no
-  longer depends on the expired cloud link above.
-- Contents, at the exact coordinates validated in §10/§11 (real-world scale, meters converted to
-  inches internally per SketchUp convention):
-  - Site ground pad, equalized paddock turf (2 x 318.92 m²) with post-and-rail fencing.
-  - Motor court, parking apron (PK01, kept at 11.00x4.00 m per owner confirmation), and perimeter
-    fire-lane paving.
-  - Stable barn: 20 standard stalls + 2 premium stalls + **2 veterinary/isolation rooms (مصاب,
-    3.50x4.00 m each — labeled and colored distinctly from the general stall population, per the
-    owner-confirmed function)** + feed room + **service room at its owner-confirmed 6.00x3.00 m**
-    + shade canopy over the central aisle.
-  - Worker wing: worker bedroom (WB01, unchanged, 7.00x4.00 m) + **worker kitchen (WK01) and
-    worker bathroom (WBTH01), both modeled at their finalized narrowed widths (3.50 m and 2.00 m
-    respectively)** to match the wing reflow required by the service-room decision.
-  - Guest/owner wing: majlis, men's WC, pergola-roofed outdoor majlis/sitting terrace, private
-    bedroom suite with ensuite bathroom — all unchanged, per owner confirmation.
-  - 9 landscape trees.
-- Every room mass and its roof were generated programmatically from the same `model.py` coordinate
-  source used for the SVG/DXF/CSV outputs (Canary 10: renders match the validated CAD geometry).
-- **Honesty on tooling:** no photorealistic path-traced rendering engine (e.g. V-Ray, Enscape) was
-  available in this environment; the deliverable is a properly-scaled, componentized 3D massing
-  model with a presentation style (Urban Planning preset, shadows on) and a luxury aerial camera
-  angle — sufficient to verify massing, proportion, and adjacency, but not a photoreal marketing
-  render. If a photoreal render is required, this .skp is ready to hand to Enscape/V-Ray/Twinmotion.
+**Photoreal 3D renders are produced externally, not in this environment.** No path-traced rendering
+engine (Blender/Cycles, V-Ray, Enscape, Twinmotion, Lumion, D5) is available or installable here.
+Rather than present in-house software-massing images that would not meet a luxury standard, this
+package provides everything an external visualization studio needs to produce the final photoreal
+set:
+
+- **Clean geometry export** — `geometry_export/stable_scene.obj` + `.mtl`, generated directly from
+  `model.py`: 41 named objects (site pad + 40 rooms), grouped by function with named materials,
+  bounding box exactly 40.00 × 50.00 m. Import-ready for any renderer.
+- **Render-production brief** — required views, camera schedule, material palette, lighting style,
+  Arabic-label handling, forbidden mistakes, output resolution, and an acceptance checklist. See the
+  consultant-handoff folder (`render_production_brief.md`, `camera_schedule.csv`,
+  `material_palette.csv`, `render_view_checklist.md`).
+
+This is the honest state: the layout is fully validated and render-ready, and photoreal
+visualization is a defined, briefed downstream production step.
 
 ## 17. Validation Report
 
@@ -452,21 +432,22 @@ design/
       room_schedule.csv
       coordinate_schedule.csv
     plans/
-      plan_dimensioned.svg / .png
-      masterplan_luxury.svg / .png
-      stable_concept_underlay.dxf
-      sketchup_thumbnail.png
-      aerial_3d_render.png
+      plan_dimensioned.svg / .png       - dimensioned technical plan
+      masterplan_luxury.svg / .png      - styled illustrative plan
+      premium_cutaway_masterplan.svg/.png - premium illustrated master-plan board (hero visual)
+      stable_concept_underlay.dxf       - CAD underlay, concept only
+    geometry_export/
+      stable_scene.obj / .mtl           - clean 3D geometry export for external photoreal rendering
+    consultant_handoff/
+      render_production_brief.md, camera_schedule.csv, material_palette.csv, render_view_checklist.md
     reports/
       validation_report.json / .txt
       source_audit.md         (this file - generated, do not hand-edit numeric sections)
 source_files/
   Stable PROJECT/            - the 4 uploaded source files, unmodified
   stable1_page.png           - full-page reference render of stable 1.pdf, used during the source audit
-FINAL_QA_LOCK_REPORT.md      - area-discrepancy audit (prior pass)
-OWNER_CONFIRMATION_FINALIZATION_REPORT.md - owner-decision record (prior pass)
-THREE_D_SYNC_REPORT.md       - this pass's 3D-model regeneration record
 ```
 
-3D model download (session-scoped, blocked from in-repo copy by this environment's network
-policy — open directly in your browser): `{{SKETCHUP_DOWNLOAD_URL}}`
+Photoreal 3D visualization is a defined downstream production step. The clean geometry export and
+the render-production brief (with camera schedule, material palette, and acceptance checklist) give
+an external visualization studio everything needed to produce the final renders — see §16.

@@ -1,0 +1,8 @@
+view_id,view_name,eye_x_m,eye_y_m,eye_z_m,target_x_m,target_y_m,target_z_m,lens_mm_equiv,time_of_day,notes
+01,Premium overhead cutaway,20.0,25.0,46.0,20.0,26.0,1.5,40,midday soft,Top-down 3/4 hero; cut roofs away to reveal plan
+02,Aerial exterior hero,-14.0,-16.0,32.0,20.0,26.0,1.5,35,golden hour,Elevated 3/4 from south-west; whole site in frame
+03,Stable aisle interior,-4.0,20.7,1.7,37.5,20.7,1.6,35,midday,Eye-level down the central aisle; both stall rows + canopy
+04,Guest / majlis zone,1.0,-6.0,2.0,13.5,9.0,1.4,40,golden hour,Arrival into indoor+outdoor majlis courtyards
+05,Paddock / courtyard,20.0,24.0,3.0,20.0,45.0,0.6,35,golden hour,Looking down the wash/service spine between paddocks
+06,Entry / parking,42.0,-12.0,3.0,29.0,6.0,1.0,40,golden hour,Arrival court, gate, 4-bay parking apron
+07,Twilight hero (optional),-18.0,-20.0,26.0,20.0,24.0,2.5,35,dusk,Optional beauty shot; warm interior + bollard glow
