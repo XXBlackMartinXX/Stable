@@ -212,3 +212,8 @@ luxury = build_svg("LUXURY EQUESTRIAN STABLE - ILLUSTRATIVE TOP-DOWN MASTERPLAN"
 (OUT_DIR / "masterplan_luxury.svg").write_text(luxury, encoding="utf-8")
 
 print(f"Wrote plan_dimensioned.svg and masterplan_luxury.svg to {OUT_DIR}")
+
+import cairosvg  # noqa: E402
+for name in ("plan_dimensioned", "masterplan_luxury"):
+    cairosvg.svg2png(url=str(OUT_DIR / f"{name}.svg"), write_to=str(OUT_DIR / f"{name}.png"), scale=2)
+print(f"Rendered plan_dimensioned.png and masterplan_luxury.png to {OUT_DIR}")

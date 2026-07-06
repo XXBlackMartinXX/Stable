@@ -13,6 +13,7 @@ fall back per-glyph and renders Arabic as tofu boxes. Verified in isolation befo
 Concept plan only. Not for construction or permit use.
 """
 import sys
+import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -259,7 +260,7 @@ def build():
                          f'fill-opacity="0.15" filter="url(#softblur)"/>')
             parts.append(f'<clipPath id="clip_{s["id"]}"><rect x="{x}" y="{y}" width="{w}" height="{h}" rx="3"/></clipPath>')
             parts.append(f'<g clip-path="url(#clip_{s["id"]})">')
-            parts.append(sand_texture(x, y, w, h, base, seed=hash(s["id"]) % 1000))
+            parts.append(sand_texture(x, y, w, h, base, seed=zlib.crc32(s["id"].encode()) % 1000))
             parts.append("</g>")
             parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="3" fill="none" '
                          f'stroke="{shadow}" stroke-width="1.6"/>')
@@ -374,3 +375,8 @@ def build():
 svg = build()
 (OUT_DIR / "premium_cutaway_masterplan.svg").write_text(svg, encoding="utf-8")
 print(f"Wrote premium_cutaway_masterplan.svg to {OUT_DIR}")
+
+import cairosvg  # noqa: E402
+cairosvg.svg2png(url=str(OUT_DIR / "premium_cutaway_masterplan.svg"),
+                  write_to=str(OUT_DIR / "premium_cutaway_masterplan.png"), scale=2)
+print(f"Rendered premium_cutaway_masterplan.png to {OUT_DIR}")
