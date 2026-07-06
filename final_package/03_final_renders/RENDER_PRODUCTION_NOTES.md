@@ -2,6 +2,13 @@
 
 **Concept visualization package only. Not for construction or permit use.**
 
+> **Superseded by `RENDER_FINALIZATION_REPORT.md`.** This document is the historical record of the
+> render-upgrade pass that produced the premium vector cutaway and first attempted (but could not
+> complete) a SketchUp materials/camera pass. A later pass built a from-scratch deterministic 3D
+> renderer (`design/scripts/render_3d.py`) that delivers the six perspective views this document
+> describes as missing (§3). **For the current, accurate state of the 3D render set, see
+> `RENDER_FINALIZATION_REPORT.md` — this file is kept unmodified below for provenance only.**
+
 This document records exactly what was produced for the render/visualization upgrade in this
 pass, the tools actually used, what was attempted and did not complete, and an honest fidelity
 comparison against the original reference render. Per `QUALITY_GAP_ANALYSIS.md` §1, this pass

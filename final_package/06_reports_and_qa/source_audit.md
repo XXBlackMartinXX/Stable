@@ -361,12 +361,18 @@ componentized where rooms repeat: 20 standard stalls share one component definit
 and landscape trees are componentized and arrayed). This model was regenerated after the owner-
 confirmation pass and reflects the current `model.py` exactly — it is not stale.
 
-- **File:** `Luxury_Equestrian_Stable_Concept_Finalized.skp` — download link (session-scoped, from
-  the SketchUp cloud service, valid for this session): `https://api.sketchup.com/mcp/v1/sketchup/dl/cfb6760e-559d-40c7-81c4-643eb8e2829d/006-save/luxury_equestrian_stable_concept_finalized.skp?t=l-DQPeFf8O-1rVPRrAMkHg`
-  — note: this environment's outbound network policy blocks `api.sketchup.com`, so the file could
-  not be copied into this repository; open the link directly in your own browser to download it.
-- **Thumbnail / aerial render:** `design/output/plans/sketchup_thumbnail.png` and
-  `design/output/plans/aerial_3d_render.png` (both included in this repo).
+- **File:** `Luxury_Equestrian_Stable_Concept_Finalized.skp` was built in a SketchUp MCP cloud
+  session during an earlier pass. The connector's `save_model` tool only ever returns a
+  session-scoped download link, and that session has since ended — the link recorded in an earlier
+  revision of this report (`https://api.sketchup.com/mcp/v1/sketchup/dl/cfb6760e-559d-40c7-81c4-643eb8e2829d/006-save/luxury_equestrian_stable_concept_finalized.skp?t=l-DQPeFf8O-1rVPRrAMkHg`) is **expired and not usable**; it is kept
+  here only as provenance of which build produced the static images below, not as a live download.
+  This environment's outbound network policy also blocks `api.sketchup.com`, so the `.skp` itself
+  could never be copied into this repository in any pass.
+- **Static renders (included in this repo, current):** `design/output/plans/aerial_3d_render.png`,
+  `sketchup_thumbnail.png`, plus the deterministic custom-rendered perspective set added in the
+  render-finalization pass — see `RENDER_FINALIZATION_REPORT.md` for the authoritative, current list
+  of every 3D view, the tool used to produce each one, and honest notes on fidelity. This section no
+  longer depends on the expired cloud link above.
 - Contents, at the exact coordinates validated in §10/§11 (real-world scale, meters converted to
   inches internally per SketchUp convention):
   - Site ground pad, equalized paddock turf (2 x 318.92 m²) with post-and-rail fencing.
