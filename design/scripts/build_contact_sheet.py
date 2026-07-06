@@ -1,21 +1,29 @@
-"""Assemble the render contact sheet from existing plan/render deliverables.
+"""Assemble the render contact sheet from finished plan/render deliverables.
 
-Reads finished PNGs from design/output/plans/ (produced by render_premium.py and
-the SketchUp pipeline) and lays them out on one labeled sheet. Does not generate
-or alter any of the source images.
+Reads finished PNGs from design/output/plans/ (produced by render_premium.py and render_3d.py)
+and lays them out on one labeled sheet. Does not generate or alter any of the source images.
+
+Fixed in the production-readiness pass: the previous version of this script listed
+aerial_3d_render.png and sketchup_thumbnail.png as two separate numbered views ("2." and "3."),
+but they are byte-identical duplicates (same file, saved under two names) - a real defect found
+in FINAL_REPO_PRODUCTION_REVIEW.md §3.1. They are now shown once, clearly labeled as a superseded
+legacy reference, and the new deterministic 3D render set (render_3d.py) is the featured gallery.
 """
 import os
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PLANS = os.path.join(HERE, "..", "output", "plans")
+RENDERS_3D = os.path.join(PLANS, "renders_3d")
 
-SHEET_W = 2400
+SHEET_W = 2500
 MARGIN = 60
 HEADER_H = 160
-FOOTER_H = 110
+FOOTER_H = 130
 LABEL_H = 46
-GAP = 40
+GAP = 36
+COLS = 3
+
 
 def load_font(size, bold=False):
     candidates = [
@@ -26,13 +34,19 @@ def load_font(size, bold=False):
             return ImageFont.truetype(c, size)
     return ImageFont.load_default()
 
+
 def build():
     entries = [
         ("premium_cutaway_masterplan.png", "1. Premium Vector Cutaway Master Plan (primary deliverable)"),
-        ("aerial_3d_render.png", "2. 3D Aerial Massing - Synchronized Geometry (SketchUp, prior pass)"),
-        ("sketchup_thumbnail.png", "3. 3D Massing Thumbnail - Synchronized Geometry (SketchUp, prior pass)"),
-        ("plan_dimensioned.png", "4. Dimensioned Technical Plan"),
-        ("masterplan_luxury.png", "5. Styled Masterplan (SVG render)"),
+        (os.path.join("renders_3d", "aerial_exterior.png"), "2. Aerial Exterior (deterministic 3D)"),
+        (os.path.join("renders_3d", "stable_aisle.png"), "3. Stable Aisle Interior (deterministic 3D)"),
+        (os.path.join("renders_3d", "paddock_courtyard.png"), "4. Paddock & Service Courtyard (deterministic 3D)"),
+        (os.path.join("renders_3d", "guest_majlis.png"), "5. Guest & Majlis Zone (deterministic 3D)"),
+        (os.path.join("renders_3d", "entry_parking.png"), "6. Entry & Parking Apron (deterministic 3D)"),
+        (os.path.join("renders_3d", "twilight_hero.png"), "7. Twilight Hero View (deterministic 3D)"),
+        ("plan_dimensioned.png", "8. Dimensioned Technical Plan"),
+        ("masterplan_luxury.png", "9. Styled Masterplan (SVG render)"),
+        ("aerial_3d_render.png", "10. Legacy SketchUp Massing Reference (superseded - see RENDER_FINALIZATION_REPORT.md)"),
     ]
     imgs = []
     for fname, label in entries:
@@ -40,10 +54,10 @@ def build():
         if os.path.exists(p):
             imgs.append((Image.open(p).convert("RGB"), label))
 
-    cols = 2
+    cols = COLS
     rows = (len(imgs) + cols - 1) // cols
     cell_w = (SHEET_W - 2 * MARGIN - (cols - 1) * GAP) // cols
-    cell_img_h = int(cell_w * 0.85)
+    cell_img_h = int(cell_w * 0.72)
     cell_h = cell_img_h + LABEL_H
 
     sheet_h = HEADER_H + rows * cell_h + (rows - 1) * GAP + FOOTER_H + 2 * MARGIN
@@ -52,8 +66,8 @@ def build():
 
     title_font = load_font(46, bold=True)
     sub_font = load_font(24)
-    label_font = load_font(24, bold=True)
-    footer_font = load_font(20)
+    label_font = load_font(22, bold=True)
+    footer_font = load_font(19)
 
     draw.text((MARGIN, 40), "Luxury Equestrian Stable — Render Contact Sheet", font=title_font, fill=(30, 30, 30))
     draw.text((MARGIN, 96), "Concept visualization package — not for construction or permit use", font=sub_font, fill=(90, 90, 90))
@@ -81,8 +95,8 @@ def build():
     footer_y = sheet_h - FOOTER_H
     draw.line([(MARGIN, footer_y), (SHEET_W - MARGIN, footer_y)], fill=(200, 195, 180), width=2)
     footer_lines = [
-        "Item 1 is generated directly, deterministically from the validated coordinate model (design/scripts/model.py) - zero hallucination risk.",
-        "Items 2-3 reflect the finalized, owner-confirmed geometry (synchronized in the prior 3D-sync pass); see RENDER_PRODUCTION_NOTES.md for full disclosure.",
+        "Item 1 and items 2-7 are all generated deterministically, directly from the validated coordinate model (design/scripts/model.py) - zero hallucination risk.",
+        "Item 10 is kept only as a labeled historical reference to the original 3D-sync pass geometry check; it is not a current gallery view - see RENDER_FINALIZATION_REPORT.md.",
     ]
     ty = footer_y + 18
     for line in footer_lines:
@@ -92,6 +106,7 @@ def build():
     out_path = os.path.join(PLANS, "render_contact_sheet.png")
     sheet.save(out_path, "PNG")
     print("Wrote", out_path, sheet.size)
+
 
 if __name__ == "__main__":
     build()

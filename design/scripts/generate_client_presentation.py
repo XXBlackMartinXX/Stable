@@ -374,9 +374,11 @@ def build_render_gallery(flow):
         "The primary visualization for this package is a premium vector cutaway illustration, "
         "generated deterministically from the validated coordinate model — every wall, fill, and "
         "label traces back to an exact, checked dimension, eliminating any risk of a rendered image "
-        "misrepresenting the actual design. A supporting 3D massing model (geometrically synchronized "
-        "with this same validated layout) is also included. See RENDER_PRODUCTION_NOTES.md for a full, "
-        "honest account of fidelity and tooling.", body))
+        "misrepresenting the actual design. It is supported by a six-view deterministic 3D render "
+        "set (aerial exterior, stable aisle interior, paddock/courtyard, guest/majlis zone, entry/"
+        "parking, and a twilight hero shot), built directly from the same validated geometry with a "
+        "purpose-built renderer. See RENDER_FINALIZATION_REPORT.md for a full, honest account of "
+        "fidelity and tooling.", body))
     img_path = PLANS_DIR / "render_contact_sheet.png"
     if img_path.exists():
         from PIL import Image as PILImage
@@ -520,10 +522,11 @@ def build_appendix(flow):
         ["design/output/schedules/room_schedule.csv", "Full 40-space schedule, machine-readable"],
         ["design/output/schedules/coordinate_schedule.csv", "Full coordinate schedule, machine-readable"],
         ["design/output/plans/premium_cutaway_masterplan.svg / .png", "Primary vector illustration"],
+        ["design/output/plans/renders_3d/", "Six-view deterministic 3D render set"],
         ["design/output/plans/plan_dimensioned.svg / .png", "Dimensioned technical plan"],
         ["design/output/plans/stable_concept_underlay.dxf", "CAD underlay — concept only, not for "
          "construction"],
-        ["RENDER_PRODUCTION_NOTES.md", "Full disclosure of render tooling and fidelity"],
+        ["RENDER_FINALIZATION_REPORT.md", "Full disclosure of 3D render tooling and fidelity"],
         ["SOURCE_OF_TRUTH_LOCK.md", "Frozen geometry, program, and owner-decision reference"],
     ]
     rows = [[Paragraph(path, cell_path), Paragraph(desc, cell_desc)] for path, desc in rows]
