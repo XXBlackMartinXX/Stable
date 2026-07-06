@@ -19,15 +19,15 @@ S17,Standard Horse Stall 17,22.5,22.49,26.25,26.24,3.75,3.75,14.0625
 S18,Standard Horse Stall 18,26.25,22.49,30.0,26.24,3.75,3.75,14.0625
 S19,Standard Horse Stall 19,30.0,22.49,33.75,26.24,3.75,3.75,14.0625
 S20,Standard Horse Stall 20,33.75,22.49,37.5,26.24,3.75,3.75,14.0625
-WB01,Worker Bedroom (4 workers),0.5,26.24,7.5,30.24,7.0,4.0,28.0
-WK01,Worker Kitchen,7.5,26.24,12.0,30.24,4.5,4.0,18.0
-WBTH01,Worker Bathroom,12.0,26.24,15.0,30.24,3.0,4.0,12.0
-P01,Premium Horse Stall 1,15.0,26.24,19.0,30.24,4.0,4.0,16.0
-SP01,Special Horse Room 1 (label unresolved),19.0,26.24,22.5,30.24,3.5,4.0,14.0
-FD01,Feed Room,22.5,26.24,26.5,30.24,4.0,4.0,16.0
-SV01,Service Room,26.5,26.24,29.5,29.24,3.0,3.0,9.0
-SP02,Special Horse Room 2 (label unresolved),29.5,26.24,33.0,30.24,3.5,4.0,14.0
-P02,Premium Horse Stall 2,33.0,26.24,37.0,30.24,4.0,4.0,16.0
+WB01,Worker Bedroom (4 workers),0.0,26.24,7.0,30.24,7.0,4.0,28.0
+WK01,Worker Kitchen,7.0,26.24,10.5,30.24,3.5,4.0,14.0
+WBTH01,Worker Bathroom,10.5,26.24,12.5,30.24,2.0,4.0,8.0
+P01,Premium Horse Stall 1,12.5,26.24,16.5,30.24,4.0,4.0,16.0
+SP01,Veterinary / Isolation Room 1,16.5,26.24,20.0,30.24,3.5,4.0,14.0
+FD01,Feed Room,20.0,26.24,24.0,30.24,4.0,4.0,16.0
+SV01,Service Room,24.0,26.24,30.0,29.24,6.0,3.0,18.0
+SP02,Veterinary / Isolation Room 2,30.0,26.24,33.5,30.24,3.5,4.0,14.0
+P02,Premium Horse Stall 2,33.5,26.24,37.5,30.24,4.0,4.0,16.0
 MJ01,Men's Majlis,2.0,5.0,10.0,13.24,8.0,8.24,65.92
 MWC01,Men's WC (majlis),10.0,5.0,11.76,6.76,1.76,1.76,3.0976
 OSA01,Outdoor Majlis / Sitting Area,12.5,5.0,20.5,13.24,8.0,8.24,65.92

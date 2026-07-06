@@ -25,18 +25,22 @@ Every room below carries a `source` field:
   "redesign_improvement"   - deliberately changed from the (inconsistent/inefficient) existing
                              layout as a named improvement, not a blind copy
 
-UNRESOLVED LABEL (Canary 7): the 2 special horse rooms are spelled "مصلب" in stable 1.pdf (the
-dimensioned CAD) but "مصاب" in the rendered image (WhatsApp 3.27.30 PM) - two different words.
-مصلب (root ص-ل-ب) most plausibly reads as a breeding/covering ("تصليب" = crossbreeding) room in
-Gulf equestrian usage; مصاب literally means "injured/afflicted" and would imply a veterinary/
-infirmary/isolation room. Both are legitimate professional readings of two DIFFERENT spellings
-found in two DIFFERENT source files - this is a genuine source conflict, not a legibility issue.
-FUNCTION IS NOT FINALIZED. See source_audit.md Source Conflict Table item 1.
+RESOLVED (owner confirmation, this pass): the 2 rooms spelled "مصلب" in stable 1.pdf but "مصاب" in
+the rendered image (WhatsApp 3.27.30 PM) are CONFIRMED by the owner as مصاب - injured/veterinary
+isolation rooms. Function, label, and fit-out direction (isolation ventilation, vet drainage, exam
+lighting) are now final; see OWNER_CONFIRMATION_FINALIZATION_REPORT.md for the decision record.
 
-SOURCE CONFLICT (service room size): Requirments.txt line 6 states "غرفة للخدمة 3*3" (3.00 x 3.00 m).
-stable 1.pdf dimensions the "خدمة" room at 6.00 x 3.00 m. Per source hierarchy (explicit written
-requirement outranks a CAD reading), this model uses 3.00 x 3.00 m as the validated default and
-carries the CAD's 6.00 x 3.00 m as a noted alternative. See source_audit.md item 2.
+RESOLVED (owner confirmation, this pass): the service room (SV01) is CONFIRMED at 6.00 x 3.00 m,
+matching the stable 1.pdf CAD reading rather than the 3.00 x 3.00 m in Requirments.txt line 6. This
+required reflowing the wing band (see the wing section below) since the wider service room no
+longer fits the original layout without adjustment; the worker kitchen (WK01) and worker bathroom
+(WBTH01) were narrowed to absorb the difference - both were redesign-choice rooms with no source-
+mandated size, so this trade-off does not touch any explicitly required dimension. See
+OWNER_CONFIRMATION_FINALIZATION_REPORT.md.
+
+RESOLVED (owner confirmation, this pass): outdoor majlis (OSA01) and private bathroom (PBTH01)
+widths, the parking apron (PK01), and the worker bedroom (WB01) footprint are all CONFIRMED as
+previously modeled - no geometry change needed for these four items.
 """
 
 SITE_WIDTH = 40.00
@@ -93,63 +97,70 @@ for i in range(10):
         door="north wall, aisle-facing", source="required_program",
         notes="Row B. 3.75x3.75m per Requirments.txt line 1 and stable 1.pdf.")
 
-# --- Wing band (Y26.24-30.24): worker rooms (west) | premium/special/feed/service (center-east) ---
+# --- Wing band (Y26.24-30.24): worker rooms (west) | premium/vet/feed/service (center-east) ---
+# Reflowed this pass to fit SV01 at its owner-confirmed 6.00 x 3.00 m (was 3.00 x 3.00 m), which no
+# longer fits the original sequence without adjustment. WK01 and WBTH01 (both redesign-choice rooms
+# with no source-mandated size) were narrowed to absorb the extra 3.00 m; every required_program
+# room (P01, P02, SP01/SP02 dimensions, FD01, SV01) keeps its confirmed size unchanged. The wing now
+# spans X0.00-37.50 exactly (previously 0.50-37.00 with 1.00 m of unused margin), flush with the
+# stall rows above it.
 WING_Y0, WING_Y1 = 26.24, 30.24
 
 add("WB01", "غرفة نوم عمال", "Worker Bedroom (4 workers)", "worker_bedroom",
-    0.50, WING_Y0, 7.50, WING_Y1, door="north wall, service-corridor-facing",
+    0.00, WING_Y0, 7.00, WING_Y1, door="north wall, service-corridor-facing",
     source="redesign_improvement",
     notes="7.00 x 4.00 m = 28 m2. stable 1.pdf shows an existing worker block (سكن عمال + حمام + "
           "مطبخ combined) approx. 4.74 x 13.66 m deep and narrow, wedged between stall columns. "
           "Redesign reflows the same program into a shallower, wider footprint aligned with the "
           "feed/service wing for a cleaner unified roofline and easier staff access - same function, "
-          "improved proportions. REQUIRES OWNER CONFIRMATION of bunk layout for 4 workers.")
+          "improved proportions. Footprint and bunk layout for 4 workers CONFIRMED by owner as-is.")
 
 add("WK01", "مطبخ العمال", "Worker Kitchen", "worker_kitchen",
-    7.50, WING_Y0, 12.00, WING_Y1, door="north wall, service-corridor-facing",
-    source="redesign_improvement", notes="4.50 x 4.00 m = 18 m2. See WB01 note on reflowed worker wing.")
+    7.00, WING_Y0, 10.50, WING_Y1, door="north wall, service-corridor-facing",
+    source="redesign_improvement", notes="3.50 x 4.00 m = 14 m2. Narrowed from an earlier 4.50 m width "
+          "this pass to absorb the owner-confirmed 6.00 m service room (SV01) below; no source-"
+          "mandated size for this room, so this is a redesign trade-off, not a lost requirement.")
 
 add("WBTH01", "حمام العمال", "Worker Bathroom", "worker_bathroom",
-    12.00, WING_Y0, 15.00, WING_Y1, door="north wall, service-corridor-facing",
-    source="redesign_improvement", notes="3.00 x 4.00 m = 12 m2. See WB01 note on reflowed worker wing.")
+    10.50, WING_Y0, 12.50, WING_Y1, door="north wall, service-corridor-facing",
+    source="redesign_improvement", notes="2.00 x 4.00 m = 8 m2. Narrowed from an earlier 3.00 m width "
+          "this pass to absorb the owner-confirmed 6.00 m service room (SV01) below; no source-"
+          "mandated size for this room, so this is a redesign trade-off, not a lost requirement.")
 
 add("P01", "غرفة خيل 4x4", "Premium Horse Stall 1", "premium_horse_stall",
-    15.00, WING_Y0, 19.00, WING_Y1, door="north wall, corridor-facing",
+    12.50, WING_Y0, 16.50, WING_Y1, door="north wall, corridor-facing",
     source="required_program", notes="4.00 x 4.00 m exactly as labeled 'غرفة خيل 4x4' in stable 1.pdf.")
 
-add("SP01", "غرفة مصلب خيل / مصاب خيل (؟)", "Special Horse Room 1 (label unresolved)",
-    "special_horse_room_UNCONFIRMED",
-    19.00, WING_Y0, 22.50, WING_Y1, door="north wall, corridor-facing",
-    source="cad_sourced / UNRESOLVED LABEL",
-    notes="3.50 x 4.00 m, dimensions read directly off stable 1.pdf ('غرفة مصلب خيل', 3.5 wide x 4 deep). "
-          "ANTI-HALLUCINATION FLAG: the rendered image (WhatsApp 3.27.30 PM) spells the same room "
-          "'غرفة مصاب خيل' instead - a different word (مصلب vs مصاب). مصلب plausibly reads as a "
-          "breeding/covering room (تصليب = crossbreeding, Gulf equestrian usage); مصاب literally means "
-          "'injured' and would imply a veterinary/infirmary/isolation room. Two DIFFERENT spellings in "
-          "two DIFFERENT source files - genuine conflict, not resolved. Positioned adjacent to feed/"
-          "service and nearest the rear wash/service yard so either reading already sits in the correct "
-          "functional location (separated from the general stall population, close to service access). "
-          "FUNCTION NOT TO BE FINALIZED until owner confirms.")
+add("SP01", "غرفة مصاب خيل", "Veterinary / Isolation Room 1", "veterinary_isolation_room",
+    16.50, WING_Y0, 20.00, WING_Y1, door="north wall, corridor-facing",
+    source="cad_sourced + owner_confirmed",
+    notes="3.50 x 4.00 m, dimensions read directly off stable 1.pdf. Label/function CONFIRMED by "
+          "owner this pass as 'مصاب' (injured/veterinary-isolation room) - the reading shown in the "
+          "rendered image (WhatsApp 3.27.30 PM); the CAD's alternate spelling 'مصلب' is superseded. "
+          "Positioned away from the general stall population, adjacent to feed/service and nearest "
+          "the rear wash/service yard - correct functional location for isolation/vet use. Fit-out "
+          "should provide independent ventilation, a washable/drainable floor, and dedicated exam "
+          "lighting (licensed MEP/vet consultant review required before construction).")
 
 add("FD01", "غرفة علف", "Feed Room", "feed_room",
-    22.50, WING_Y0, 26.50, WING_Y1, door="north wall, corridor-facing",
+    20.00, WING_Y0, 24.00, WING_Y1, door="north wall, corridor-facing",
     source="required_program", notes="4.00 x 4.00 m exactly as labeled 'غرفة علف' in stable 1.pdf.")
 
 add("SV01", "غرفة خدمة", "Service Room", "service_room",
-    26.50, WING_Y0, 29.50, WING_Y0 + 3.00, door="north wall, corridor-facing",
-    source="required_program / SOURCE CONFLICT",
-    notes="3.00 x 3.00 m per Requirments.txt line 6 ('غرفة للخدمة 3*3') - used as the validated default "
-          "per source hierarchy (explicit written requirement outranks CAD reading). CONFLICT: "
-          "stable 1.pdf dimensions the same 'خدمة' room at 6.00 x 3.00 m (double width). Both values "
-          "are reported in source_audit.md Source Conflict Table; owner should confirm which governs.")
+    24.00, WING_Y0, 30.00, WING_Y0 + 3.00, door="north wall, corridor-facing",
+    source="cad_sourced + owner_confirmed",
+    notes="6.00 x 3.00 m, CONFIRMED by owner this pass as governing over the 3.00 x 3.00 m in "
+          "Requirments.txt line 6 - stable 1.pdf's CAD dimension is now the final size. Oriented with "
+          "the 6.00 m dimension along the aisle (matching the CAD reading) and flush to the aisle-"
+          "facing wall of the wing, leaving a 1.00 m recessed service alcove at the rear (consistent "
+          "with the special/service room massing rhythm elsewhere in the wing).")
 
-add("SP02", "غرفة مصلب خيل / مصاب خيل (؟)", "Special Horse Room 2 (label unresolved)",
-    "special_horse_room_UNCONFIRMED",
-    29.50, WING_Y0, 33.00, WING_Y1, door="north wall, corridor-facing",
-    source="cad_sourced / UNRESOLVED LABEL", notes="See SP01 note - identical unresolved-label flag applies.")
+add("SP02", "غرفة مصاب خيل", "Veterinary / Isolation Room 2", "veterinary_isolation_room",
+    30.00, WING_Y0, 33.50, WING_Y1, door="north wall, corridor-facing",
+    source="cad_sourced + owner_confirmed", notes="See SP01 note - identical owner-confirmed label/function applies.")
 
 add("P02", "غرفة خيل 4x4", "Premium Horse Stall 2", "premium_horse_stall",
-    33.00, WING_Y0, 37.00, WING_Y1, door="north wall, corridor-facing",
+    33.50, WING_Y0, 37.50, WING_Y1, door="north wall, corridor-facing",
     source="required_program", notes="4.00 x 4.00 m exactly as labeled 'غرفة خيل 4x4' in stable 1.pdf.")
 
 # --- Guest / owner zone (front band, Y5.00-13.24) ---
@@ -167,12 +178,12 @@ add("MWC01", "حمام (مجلس)", "Men's WC (majlis)", "mens_wc",
 
 add("OSA01", "مجلس خارجي / جلسة خارجية", "Outdoor Majlis / Sitting Area", "outdoor_sitting",
     12.50, 5.00, 20.50, 13.24, door="open arcade, no enclosing door (shaded pergola)",
-    source="cad_sourced_approx", notes="8.00 x 8.24 m, mirrored to match the indoor majlis footprint for "
-                                        "a symmetric twin-courtyard composition. stable 1.pdf labels this "
-                                        "'مجلس خارجي' with a confirmed depth of 8.24 m (shared dimension "
-                                        "line with the indoor majlis); its width was not fully legible in "
-                                        "the drawing, so 8.00 m is a redesign choice matching the majlis "
-                                        "for symmetry. Satisfies Requirments.txt line 9 ('جلسة خارجية').")
+    source="cad_sourced_approx + owner_confirmed",
+    notes="8.00 x 8.24 m, mirrored to match the indoor majlis footprint for a symmetric twin-courtyard "
+          "composition. stable 1.pdf labels this 'مجلس خارجي' with a confirmed depth of 8.24 m (shared "
+          "dimension line with the indoor majlis); its width was not fully legible in the drawing, so "
+          "8.00 m was a redesign choice matching the majlis for symmetry - CONFIRMED by owner as final "
+          "this pass. Satisfies Requirments.txt line 9 ('جلسة خارجية').")
 
 add("PBR01", "غرفة نوم خاصة", "Private Bedroom", "private_bedroom",
     22.50, 5.00, 27.33, 8.76, door="north wall, private courtyard-facing",
@@ -181,18 +192,18 @@ add("PBR01", "غرفة نوم خاصة", "Private Bedroom", "private_bedroom",
 
 add("PBTH01", "حمام (خاص)", "Private Bathroom", "private_bathroom",
     22.50, 8.76, 27.33, 10.76, door="north wall, ensuite from private bedroom",
-    source="cad_sourced_approx", notes="4.83 x 2.00 m = 9.66 m2. Depth of 2.00 m read directly off "
-                                        "stable 1.pdf; width assumed equal to the bedroom above it "
-                                        "(no separate width dimension legible in the source drawing).")
+    source="cad_sourced_approx + owner_confirmed",
+    notes="4.83 x 2.00 m = 9.66 m2. Depth of 2.00 m read directly off stable 1.pdf; width assumed "
+          "equal to the bedroom above it (no separate width dimension legible in the source drawing) "
+          "- CONFIRMED by owner as final this pass.")
 
-# --- Parking (found in the rendered image only - optional program addition) ---
+# --- Parking (found in the rendered image only - optional program addition, KEPT by owner decision) ---
 add("PK01", "بركنج", "Parking Apron (4 bays)", "parking",
     26.00, 0.50, 37.00, 4.50, door="direct from motor court, open-air",
-    source="OPTIONAL - found in render only",
+    source="found in render only + owner_confirmed",
     notes="11.00 x 4.00 m apron for 4 vehicles. Not present in Requirments.txt or dimensioned in "
           "stable 1.pdf; visible only in the rendered image (WhatsApp 3.27.30 PM, labeled 'بركنج'). "
-          "Included as an optional upgrade recommendation - CONFIRM with owner whether to keep, "
-          "resize, or omit.")
+          "CONFIRMED by owner this pass to be kept as modeled.")
 
 # --- Paddocks (Y31.24-50.00) ---
 add("PD01", "بادوك 1", "Paddock 1", "paddock",

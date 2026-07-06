@@ -34,7 +34,7 @@ DISCLAIMER = ("Concept plan only. Not for construction or permit use until revie
 FUNC_COLOR = {
     "horse_stall": "#c9a875",
     "premium_horse_stall": "#b8894f",
-    "special_horse_room_UNCONFIRMED": "#d94f4f",
+    "veterinary_isolation_room": "#c96a5a",
     "feed_room": "#8a9a5b",
     "service_room": "#9a9a9a",
     "worker_bedroom": "#7fa7c9",
@@ -55,7 +55,7 @@ FUNC_COLOR = {
 FUNC_COLOR_LUX = {
     "horse_stall": "#d9b98c",
     "premium_horse_stall": "#c79a5b",
-    "special_horse_room_UNCONFIRMED": "#e07a5f",
+    "veterinary_isolation_room": "#d68b7a",
     "feed_room": "#9caf6b",
     "service_room": "#a8a8a8",
     "worker_bedroom": "#8fb4d9",
@@ -133,20 +133,36 @@ def build_svg(title, colors, styled=False):
         x, y = x2px(s["x_min"]), y2px(s["y_min"])
         w, h = s["width_m"] * SCALE, s["depth_m"] * SCALE
         fill = colors.get(s["function"], "#eeeeee")
-        stroke = "#e0703f" if "UNCONFIRMED" in s["function"] else ("#1a1a1a" if not styled else "#5a4a3a")
-        dash = ' stroke-dasharray="4,2"' if "UNCONFIRMED" in s["function"] else ""
+        stroke = "#1a1a1a" if not styled else "#5a4a3a"
+        dash = ""
         opacity = "0.95" if styled else "1"
         parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" fill-opacity="{opacity}" '
                      f'stroke="{stroke}" stroke-width="1.4"{dash}/>')
 
         txt_color = text_color_for(fill)
-        label_font = 8.5 if s["width_m"] < 4.2 else 10
+
+        # Fit the ID label to the box width (avoid clipping/overflow on narrow rooms like
+        # WBTH01 at 2.00m or MWC01 at 1.76m). Rough glyph-width estimate for bold sans-serif.
+        CHAR_W_FACTOR = 0.62
+        AVAIL_W = w - 4  # small inner padding
         label = s["id"]
+
+        def fit_font(text, max_font, min_font):
+            font = max_font
+            while font > min_font and len(text) * font * CHAR_W_FACTOR > AVAIL_W:
+                font -= 0.5
+            return font
+
+        label_font = fit_font(label, 10 if s["width_m"] >= 4.2 else 8.5, 5.5)
         parts.append(f'<text x="{x + w/2}" y="{y + h/2 - 2}" font-size="{label_font}" text-anchor="middle" '
                      f'fill="{txt_color}" font-weight="600">{esc(label)}</text>')
-        if s["width_m"] >= 4.2 or styled is False:
-            dim = f'{s["width_m"]:.2f}x{s["depth_m"]:.2f}m'
-            parts.append(f'<text x="{x + w/2}" y="{y + h/2 + 10}" font-size="7" text-anchor="middle" '
+
+        # Dimension sub-label: only draw if it fits at a still-legible size (>=5.5px);
+        # otherwise the exact size is in the legend/schedule/report instead of an overflowing box.
+        dim = f'{s["width_m"]:.2f}x{s["depth_m"]:.2f}m'
+        dim_font = fit_font(dim, 7, 5.5)
+        if len(dim) * dim_font * CHAR_W_FACTOR <= AVAIL_W and h >= 24:
+            parts.append(f'<text x="{x + w/2}" y="{y + h/2 + 10}" font-size="{dim_font}" text-anchor="middle" '
                          f'fill="{txt_color}">{esc(dim)}</text>')
 
     # Legend (bottom strip)
@@ -155,16 +171,16 @@ def build_svg(title, colors, styled=False):
     legend_items = [
         ("horse_stall", "Standard Horse Stall (3.75x3.75m) - 20 no."),
         ("premium_horse_stall", "Premium Horse Stall (4.00x4.00m) - 2 no."),
-        ("special_horse_room_UNCONFIRMED", "Special Room (3.50x4.00m) - LABEL UNCONFIRMED (dashed) - 2 no."),
+        ("veterinary_isolation_room", "Veterinary / Isolation Room (3.50x4.00m, 'mesab' - confirmed) - 2 no."),
         ("feed_room", "Feed Room (4.00x4.00m)"),
-        ("service_room", "Service Room (3.00x3.00m per brief; CAD shows 6.00x3.00 - conflict)"),
+        ("service_room", "Service Room (6.00x3.00m, CAD-confirmed per owner decision)"),
         ("worker_bedroom", "Worker Accommodation (bedroom/kitchen/bath)"),
         ("majlis", "Men's Majlis (8.00x8.24m, CAD-sourced)"),
         ("private_bedroom", "Private Bedroom Suite (4.83x3.76m, CAD-sourced)"),
         ("outdoor_sitting", "Outdoor Majlis / Sitting Terrace (open-air)"),
         ("paddock", "Paddock (2 no., equal 318.9 m2 each - was unequal in source)"),
         ("service_lane", "Perimeter Service / Fire Lane"),
-        ("parking", "Parking Apron (4 bays) - OPTIONAL, found in render only"),
+        ("parking", "Parking Apron (4 bays) - found in render only, confirmed kept by owner"),
     ]
     lx, lyy = MARGIN, ly + 14
     col_w = 350

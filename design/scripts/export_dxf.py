@@ -19,7 +19,7 @@ msp = doc.modelspace()
 LAYERS = {
     "SITE_BOUNDARY": {"color": 7},
     "HORSE_STALLS": {"color": 30},
-    "SPECIAL_UNCONFIRMED": {"color": 1},
+    "VETERINARY_ISOLATION": {"color": 1},
     "SERVICE_FEED": {"color": 3},
     "WORKER": {"color": 5},
     "GUEST_OWNER": {"color": 6},
@@ -35,7 +35,7 @@ for name, props in LAYERS.items():
 FUNC_LAYER = {
     "horse_stall": "HORSE_STALLS",
     "premium_horse_stall": "HORSE_STALLS",
-    "special_horse_room_UNCONFIRMED": "SPECIAL_UNCONFIRMED",
+    "veterinary_isolation_room": "VETERINARY_ISOLATION",
     "feed_room": "SERVICE_FEED",
     "service_room": "SERVICE_FEED",
     "worker_bedroom": "WORKER",

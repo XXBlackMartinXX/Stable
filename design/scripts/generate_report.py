@@ -74,26 +74,33 @@ n_pass = len(validation["passed_checks"])
 n_fail = len(validation["failed_checks"])
 n_warn = len(validation["warnings"])
 
+warn_word = "warning" if n_warn == 1 else "warnings"
 summary_lines = [f"- **Overall status: {status}** ({n_fail} failed checks, {n_pass} passed checks, "
-                  f"{n_warn} disclosed warnings)."]
+                  f"{n_warn} disclosed {warn_word})."]
 if validation["failed_checks"]:
     summary_lines.append("- **FAILED CHECKS (must be fixed before delivery):**")
     for f in validation["failed_checks"]:
         summary_lines.append(f"  - {f['check']} — {f['detail']}")
 summary_lines.append(f"- Site boundary exactly {SITE_WIDTH:.2f} x {SITE_DEPTH:.2f} m; all "
                       f"{space_count} spaces fit inside it; zero overlaps.")
-summary_lines.append("- Exact counts confirmed: 20 standard stalls, 2 premium, 2 special, 2 paddocks, "
-                      "1 feed room, 1 service room, and every named guest/worker room present.")
+summary_lines.append("- Exact counts confirmed: 20 standard stalls, 2 premium, 2 veterinary/isolation, "
+                      "2 paddocks, 1 feed room, 1 service room, and every named guest/worker room present.")
 summary_lines.append("- All mandatory sizes confirmed: standard stalls 3.75x3.75, premium 4.00x4.00, "
-                      "feed 4.00x4.00, service 3.00x3.00.")
+                      "feed 4.00x4.00, service 6.00x3.00 (owner-confirmed).")
 summary_lines.append(f"- X and Y dimension chains both close exactly ({x_chain_sum:.2f} m / "
                       f"{y_chain_sum:.2f} m).")
 summary_lines.append(f"- Both paddocks equal ({paddock_area} m² each).")
 summary_lines.append("- Every space has a defined door/gate.")
-summary_lines.append(f"- {n_warn} warnings disclosed openly (not hidden):")
+summary_lines.append(f"- {n_warn} {warn_word} disclosed openly (not hidden):")
 for w in validation["warnings"]:
     summary_lines.append(f"  - {w['warning']}" + (f" ({', '.join(w['items'])})" if w["items"] else ""))
 validation_summary = "\n".join(summary_lines)
+
+resolved_decisions = validation.get("resolved_decisions", [])
+resolved_lines = [f"**Resolved owner decisions ({len(resolved_decisions)}):**"]
+for d in resolved_decisions:
+    resolved_lines.append(f"- {d['decision']}" + (f" ({', '.join(d['items'])})" if d["items"] else ""))
+resolved_decisions_list = "\n".join(resolved_lines)
 
 context = {
     "PADDOCK_AREA": paddock_area,
@@ -110,7 +117,8 @@ context = {
     "SITE_WIDTH": f"{SITE_WIDTH:.2f}",
     "SITE_DEPTH": f"{SITE_DEPTH:.2f}",
     "VALIDATION_SUMMARY": validation_summary,
-    "UNRESOLVED_COUNT": str(n_warn),
+    "RESOLVED_DECISIONS_LIST": resolved_decisions_list,
+    "UNRESOLVED_COUNT": str(len(resolved_decisions)),
 }
 
 template = (SCRIPT_DIR / "report_template.md").read_text()

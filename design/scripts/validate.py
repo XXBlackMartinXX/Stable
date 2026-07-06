@@ -67,14 +67,14 @@ check("No overlapping spaces (parking-within-motor-court exempted)", len(overlap
 # 4. Stall counts exact
 standard_stalls = [s for s in spaces if s["function"] == "horse_stall"]
 premium_stalls = [s for s in spaces if s["function"] == "premium_horse_stall"]
-special_rooms = [s for s in spaces if s["function"] == "special_horse_room_UNCONFIRMED"]
+special_rooms = [s for s in spaces if s["function"] == "veterinary_isolation_room"]
 paddocks = [s for s in spaces if s["function"] == "paddock"]
 feed_rooms = [s for s in spaces if s["function"] == "feed_room"]
 service_rooms = [s for s in spaces if s["function"] == "service_room"]
 
 check("Exactly 20 standard horse stalls", len(standard_stalls) == 20, f"count={len(standard_stalls)}")
 check("Exactly 2 premium horse stalls", len(premium_stalls) == 2, f"count={len(premium_stalls)}")
-check("Exactly 2 special horse rooms (label unresolved, flagged)", len(special_rooms) == 2, f"count={len(special_rooms)}")
+check("Exactly 2 veterinary/isolation rooms (label confirmed: مصاب)", len(special_rooms) == 2, f"count={len(special_rooms)}")
 check("Exactly 2 paddocks", len(paddocks) == 2, f"count={len(paddocks)}")
 check("Exactly 1 feed room", len(feed_rooms) == 1, f"count={len(feed_rooms)}")
 check("Exactly 1 service room", len(service_rooms) == 1, f"count={len(service_rooms)}")
@@ -89,8 +89,9 @@ check("All premium stalls are 4.00 x 4.00 m", len(bad_premium) == 0, f"bad={bad_
 bad_feed = [s["id"] for s in feed_rooms if (s["width_m"], s["depth_m"]) != (4.00, 4.00)]
 check("Feed room is 4.00 x 4.00 m", len(bad_feed) == 0, f"bad={bad_feed}")
 
-bad_service = [s["id"] for s in service_rooms if (s["width_m"], s["depth_m"]) != (3.00, 3.00)]
-check("Service room is 3.00 x 3.00 m", len(bad_service) == 0, f"bad={bad_service}")
+bad_service = [s["id"] for s in service_rooms if (s["width_m"], s["depth_m"]) != (6.00, 3.00)]
+check("Service room is 6.00 x 3.00 m (owner-confirmed, supersedes the 3.00x3.00m brief)",
+      len(bad_service) == 0, f"bad={bad_service}")
 
 # 6. Required program checklist presence
 required_functions = {
@@ -127,32 +128,32 @@ check("Total scheduled area does not exceed site area", total_area <= site_area 
 missing_doors = [s["id"] for s in all_spaces if not s.get("door")]
 check("Every space has a defined door/gate location", len(missing_doors) == 0, f"missing={missing_doors}")
 
-# Warnings (non-blocking, honest disclosure)
-assumption_items = [s["id"] for s in spaces if s["source"] in ("redesign_choice", "redesign_improvement")]
+# Resolved decisions (informational, non-blocking - all 5 prior owner-confirmation items are now closed)
+resolved_decisions = [
+    {"decision": "Special horse rooms (SP01, SP02) confirmed as 'مصاب' - injured/veterinary "
+                 "isolation rooms. The CAD's alternate spelling 'مصلب' is superseded.",
+     "items": ["SP01", "SP02"]},
+    {"decision": "Service room (SV01) confirmed at 6.00x3.00 m, per stable 1.pdf CAD - supersedes "
+                 "the 3.00x3.00 m in Requirments.txt line 6.",
+     "items": ["SV01"]},
+    {"decision": "Parking apron (PK01) confirmed to be kept as modeled (11.00x4.00 m, 4 bays).",
+     "items": ["PK01"]},
+    {"decision": "Outdoor majlis width (OSA01) and private bathroom width (PBTH01) confirmed as "
+                 "modeled - no change.",
+     "items": ["OSA01", "PBTH01"]},
+    {"decision": "Worker bedroom (WB01) footprint and bunk layout for 4 workers confirmed as "
+                 "modeled - no change.",
+     "items": ["WB01"]},
+]
+# Byproduct of the SV01 decision above: WK01/WBTH01 (both redesign-choice rooms with no
+# source-mandated size) were narrowed to absorb the wider service room. Not an open question -
+# a direct, disclosed consequence of the SV01 decision - but recorded here for transparency.
 warnings.append({
-    "warning": "Rooms sized/reflowed by redesign choice (no exact dimension in source, or deliberately "
-               "changed from an inconsistent/inefficient existing layout) - see model.py notes per room",
-    "items": assumption_items,
-})
-unresolved_label_items = [s["id"] for s in spaces if "UNRESOLVED" in s["source"] or "UNCONFIRMED" in s["function"]]
-warnings.append({
-    "warning": "Special horse room Arabic label (مصلب / مصاب) is unresolved; function not finalized",
-    "items": unresolved_label_items,
-})
-warnings.append({
-    "warning": "Service room sized 3.00x3.00m per Requirments.txt (explicit requirement); stable 1.pdf CAD "
-               "dimensions the same room at 6.00x3.00m. Owner should confirm which governs.",
-    "items": ["SV01"],
-})
-warnings.append({
-    "warning": "Outdoor majlis/sitting width (OSA01) and private bathroom width (PBTH01) were not fully "
-               "legible in stable 1.pdf; sized by redesign choice (see model.py notes). Confirm with owner.",
-    "items": ["OSA01", "PBTH01"],
-})
-warnings.append({
-    "warning": "Parking apron (PK01) found only in the rendered image, not in Requirments.txt or stable 1.pdf; "
-               "included as an optional upgrade pending owner confirmation.",
-    "items": ["PK01"],
+    "warning": "Worker kitchen (WK01) and worker bathroom (WBTH01) were narrowed this pass "
+               "(4.50->3.50m and 3.00->2.00m respectively) to fit the owner-confirmed 6.00m-wide "
+               "service room into the wing band. Neither room has a source-mandated size, so this "
+               "is a disclosed redesign trade-off, not an open question.",
+    "items": ["WK01", "WBTH01"],
 })
 
 result = {
@@ -166,6 +167,7 @@ result = {
     "passed_checks": passed,
     "failed_checks": failed,
     "warnings": warnings,
+    "resolved_decisions": resolved_decisions,
     "status": "PASS" if len(failed) == 0 else "FAIL",
 }
 
@@ -194,6 +196,11 @@ for w in warnings:
     lines.append(f"  [WARN] {w['warning']}")
     if w["items"]:
         lines.append(f"         items: {', '.join(w['items'])}")
+lines.append(f"\nRESOLVED OWNER DECISIONS ({len(resolved_decisions)}):")
+for d in resolved_decisions:
+    lines.append(f"  [RESOLVED] {d['decision']}")
+    if d["items"]:
+        lines.append(f"         items: {', '.join(d['items'])}")
 
 (OUT_DIR / "validation_report.txt").write_text("\n".join(lines))
 

@@ -6,7 +6,7 @@
   },
   "totals": {
     "space_count": 40,
-    "total_scheduled_area_m2": 1647.01,
+    "total_scheduled_area_m2": 1648.01,
     "x_dimension_chain_sum_m": 40.0,
     "y_dimension_chain_sum_m": 50.0
   },
@@ -36,7 +36,7 @@
       "detail": "count=2"
     },
     {
-      "check": "Exactly 2 special horse rooms (label unresolved, flagged)",
+      "check": "Exactly 2 veterinary/isolation rooms (label confirmed: مصاب)",
       "detail": "count=2"
     },
     {
@@ -64,7 +64,7 @@
       "detail": "bad=[]"
     },
     {
-      "check": "Service room is 3.00 x 3.00 m",
+      "check": "Service room is 6.00 x 3.00 m (owner-confirmed, supersedes the 3.00x3.00m brief)",
       "detail": "bad=[]"
     },
     {
@@ -113,7 +113,7 @@
     },
     {
       "check": "Total scheduled area does not exceed site area",
-      "detail": "total_area=1647.01, site_area=2000.0"
+      "detail": "total_area=1648.01, site_area=2000.0"
     },
     {
       "check": "Every space has a defined door/gate location",
@@ -123,39 +123,44 @@
   "failed_checks": [],
   "warnings": [
     {
-      "warning": "Rooms sized/reflowed by redesign choice (no exact dimension in source, or deliberately changed from an inconsistent/inefficient existing layout) - see model.py notes per room",
+      "warning": "Worker kitchen (WK01) and worker bathroom (WBTH01) were narrowed this pass (4.50->3.50m and 3.00->2.00m respectively) to fit the owner-confirmed 6.00m-wide service room into the wing band. Neither room has a source-mandated size, so this is a disclosed redesign trade-off, not an open question.",
       "items": [
-        "WB01",
         "WK01",
-        "WBTH01",
-        "WSY01",
-        "FL01"
+        "WBTH01"
       ]
-    },
+    }
+  ],
+  "resolved_decisions": [
     {
-      "warning": "Special horse room Arabic label (مصلب / مصاب) is unresolved; function not finalized",
+      "decision": "Special horse rooms (SP01, SP02) confirmed as 'مصاب' - injured/veterinary isolation rooms. The CAD's alternate spelling 'مصلب' is superseded.",
       "items": [
         "SP01",
         "SP02"
       ]
     },
     {
-      "warning": "Service room sized 3.00x3.00m per Requirments.txt (explicit requirement); stable 1.pdf CAD dimensions the same room at 6.00x3.00m. Owner should confirm which governs.",
+      "decision": "Service room (SV01) confirmed at 6.00x3.00 m, per stable 1.pdf CAD - supersedes the 3.00x3.00 m in Requirments.txt line 6.",
       "items": [
         "SV01"
       ]
     },
     {
-      "warning": "Outdoor majlis/sitting width (OSA01) and private bathroom width (PBTH01) were not fully legible in stable 1.pdf; sized by redesign choice (see model.py notes). Confirm with owner.",
+      "decision": "Parking apron (PK01) confirmed to be kept as modeled (11.00x4.00 m, 4 bays).",
+      "items": [
+        "PK01"
+      ]
+    },
+    {
+      "decision": "Outdoor majlis width (OSA01) and private bathroom width (PBTH01) confirmed as modeled - no change.",
       "items": [
         "OSA01",
         "PBTH01"
       ]
     },
     {
-      "warning": "Parking apron (PK01) found only in the rendered image, not in Requirments.txt or stable 1.pdf; included as an optional upgrade pending owner confirmation.",
+      "decision": "Worker bedroom (WB01) footprint and bunk layout for 4 workers confirmed as modeled - no change.",
       "items": [
-        "PK01"
+        "WB01"
       ]
     }
   ],

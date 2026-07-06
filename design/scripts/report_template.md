@@ -8,12 +8,12 @@ local architect/engineer, MEP/civil engineer, and fire/life-safety consultant.**
 ## 1. Executive Summary
 
 The uploaded `Stable PROJECT.zip` contains a fully-specified 40m x 50m equestrian compound program
-(20 standard stalls, 2 premium stalls, 2 special/unresolved-label horse rooms, feed room, 2
-paddocks, service room, 4-worker accommodation, men's majlis, outdoor sitting, and a private
-bedroom suite) already laid out once, in a dimensioned CAD drawing and a matching 3D render. That
-existing layout works but is cramped in places, its two paddocks are inconsistently sized (150 m²
-vs 225 m²), its worker housing is squeezed into an oddly narrow 4.74m-wide slot, and its guest and
-service circulation are not clearly separated.
+(20 standard stalls, 2 premium stalls, 2 veterinary/isolation horse rooms, feed room, 2 paddocks,
+service room, 4-worker accommodation, men's majlis, outdoor sitting, and a private bedroom suite)
+already laid out once, in a dimensioned CAD drawing and a matching 3D render. That existing layout
+works but is cramped in places, its two paddocks are inconsistently sized (150 m² vs 225 m²), its
+worker housing is squeezed into an oddly narrow 4.74m-wide slot, and its guest and service
+circulation are not clearly separated.
 
 This redesign keeps every mandated room, count, and confirmed dimension, and reorganizes the
 compound into eight clear west-to-east bands (guest arrival → majlis/private-suite → stable aisle →
@@ -21,10 +21,13 @@ feed/service/worker wing → paddocks), separated by a continuous perimeter fire
 horse, guest, and service circulation never cross unnecessarily. Both paddocks are equalized at
 {{PADDOCK_AREA}} m² each (previously unequal in the source). All {{SPACE_COUNT}} spaces are
 validated by script: every dimension chain closes exactly to 40.00 x 50.00 m, no rooms overlap, and
-every mandatory count and size from the source program is present. Two items are explicitly flagged
-as unresolved rather than guessed: the special horse-room label (spelled two different ways in two
-different source files) and a service-room size conflict between the text brief and the CAD
-drawing.
+every mandatory count and size from the source program is present.
+
+**Owner confirmation status: all 5 previously-flagged items are now resolved** (see §5) — the
+special rooms are confirmed as veterinary/isolation rooms (مصاب), the service room is confirmed at
+6.00x3.00 m (superseding the 3x3 m brief, which required reflowing the wing band around it), and
+the parking apron, outdoor majlis/private bathroom widths, and worker bedroom footprint are all
+confirmed as previously modeled.
 
 ## 2. Source Audit
 
@@ -60,9 +63,9 @@ region-by-region to read every dimension string; both JPEGs were viewed directly
 | Site | 40 m (top) x 50 m (right side) | High — dimension lines explicit |
 | Stalls 1–20 | 3.75 x 3.75 m each, all labeled individually | High |
 | 2 rooms labeled "غرفة خيل 4x4" | 4.00 x 4.00 m | High |
-| 2 rooms labeled "غرفة **مصلب** خيل" | 3.50 (w) x 4.00 (d) m | High for the numbers; label itself is the unresolved item |
+| 2 rooms labeled "غرفة **مصلب** خيل" | 3.50 (w) x 4.00 (d) m | High for the numbers; label itself was unresolved between sources — **now confirmed by owner as مصاب (§5)** |
 | "غرفة علف" (feed room) | 4.00 x 4.00 m | High |
-| "خدمة" (service room) | 6.00 (w) x 3.00 (d) m | High reading, but **conflicts with Requirments.txt line 6 (3x3)** |
+| "خدمة" (service room) | 6.00 (w) x 3.00 (d) m | High reading; conflicted with Requirments.txt line 6 (3x3) — **owner has confirmed 6.00x3.00 governs (§5)** |
 | "مجلس" (majlis) | 8.00 (w) x 8.24 (d) m | High |
 | Small "حمام" beside majlis/bedroom cluster | 1.76 x 1.76 m | High |
 | "غرفة نوم" (bedroom) | 4.83 (w) x 3.76 (d) m | High |
@@ -78,7 +81,8 @@ region-by-region to read every dimension string; both JPEGs were viewed directly
 - Shows a **parking apron "بركنج"** for ~4 vehicles at the same spot as the CAD's unlabeled
   top-left block — resolves that ambiguity. Not in the text brief or dimensioned in the CAD.
 - **Spells the 2 special rooms "غرفة مصاب خيل"** — a different word from the CAD's "غرفة مصلب خيل".
-  This is a genuine spelling conflict between two source files, not a resolution.
+  This was a genuine spelling conflict between two source files; the owner has since confirmed this
+  render's reading (مصاب, injured/veterinary-isolation) as final (§5).
 - Confirms two separate bathrooms exist near the majlis/bedroom cluster (one small, one larger),
   consistent with "majlis + WC" and "bedroom + private bath" both being satisfied.
 
@@ -102,28 +106,30 @@ never given in any source file).
 - **Worker housing** is a very narrow (4.74 m wide) block wedged between two stall columns —
   cramped proportions for a 4-person bedroom + bath + kitchen.
 - No visible dedicated fire/emergency/service lane separate from the guest motor court.
-- Service room dimensioned inconsistently between the brief (3x3) and the CAD (6x3).
+- Service room dimensioned inconsistently between the brief (3x3) and the CAD (6x3) — resolved
+  this pass; owner confirmed 6.00x3.00 m governs (§5).
 
 ### 2.8 Confidence levels
 
 - **High confidence:** site 40x50m; all 20 standard stall sizes; both premium stall sizes; feed
   room size; majlis size; majlis WC size; private bedroom size; gate on the front edge.
   Requirements clearly explicit or clearly dimensioned in ≥2 sources.
-- **Medium confidence:** special-room size (3.5x4.0, numbers clear, label meaning is not); private
-  bathroom width; outdoor majlis width; worker-block internal sub-splits; paddock exact dimensions
-  (legible but slightly compressed layout in the scan).
-- **Unresolved (flagged, not guessed):** special-room function/label; service-room size conflict.
+- **Medium confidence:** special-room size (3.5x4.0, numbers clear, label meaning needed owner
+  input); private bathroom width; outdoor majlis width; worker-block internal sub-splits; paddock
+  exact dimensions (legible but slightly compressed layout in the scan).
+- **Resolved by owner confirmation (this pass, not guessed):** special-room function/label (مصاب);
+  service-room size (6.00x3.00 m). See §5.
 
 ## 3. Source Conflict Table
 
-| # | Conflicting item | Source A | Source B | Interpretation used in this redesign | Confidence | Owner confirmation required? |
+| # | Conflicting item | Source A | Source B | Interpretation used in this redesign | Confidence | Owner decision |
 |---|---|---|---|---|---|---|
-| 1 | Special horse-room label | `stable 1.pdf`: **"مصلب"** (breeding/covering room reading, from تصليب = crossbreeding) | Render `...3.27.30 PM.jpeg`: **"مصاب"** (literally "injured" → veterinary/infirmary reading) | Kept BOTH spellings on the schedule; function left **UNCONFIRMED**; rooms positioned in a location that works for either reading (isolated from general stalls, next to feed/service, near the rear service yard) | Medium (numbers), Low (label meaning) | **YES — required** |
-| 2 | Service room size | `Requirments.txt` line 6: **3.00 x 3.00 m** (explicit written requirement) | `stable 1.pdf`: **6.00 x 3.00 m** (measured CAD) | Used **3.00 x 3.00 m** as the validated default per the source hierarchy (explicit requirement outranks a CAD reading); 6.00x3.00 recorded as the noted alternative | High (both readings are clear; the conflict is which one governs) | **YES — required** |
-| 3 | Outdoor majlis / private bathroom width | `stable 1.pdf`: depth dimensioned, width not clearly legible at scan resolution | — | Sized by redesign choice: outdoor majlis mirrors the indoor majlis (8.00 m) for a symmetric twin-courtyard; private bathroom assumed same width as the bedroom above it (4.83 m) | Medium | Recommended |
-| 4 | Worker housing proportions | `stable 1.pdf`: single narrow block, 4.74 x 13.66 m overall | — | Redesign reflows the same combined area into a shallower, wider 3-room wing (bedroom/kitchen/bath) aligned with the feed/service wing — same function and similar total area, improved proportions | N/A (deliberate improvement) | Recommended |
-| 5 | Paddock sizing | `stable 1.pdf`: unequal, ~150 m² and ~225 m² | — | Redesign makes both paddocks equal at {{PADDOCK_AREA}} m² each | N/A (deliberate improvement) | Recommended |
-| 6 | Parking apron | Not in `Requirments.txt` or `stable 1.pdf` | Present in render `...3.27.30 PM.jpeg` ("بركنج", ~4 cars) | Included as an **optional** upgrade (PK01), clearly flagged | N/A | **YES — confirm keep/resize/omit** |
+| 1 | Special horse-room label | `stable 1.pdf`: **"مصلب"** (breeding/covering room reading, from تصليب = crossbreeding) | Render `...3.27.30 PM.jpeg`: **"مصاب"** (literally "injured" → veterinary/infirmary reading) | **RESOLVED:** owner confirmed مصاب — the 2 rooms (SP01, SP02) are veterinary/isolation rooms; the CAD's مصلب spelling is superseded | Medium (numbers), Low (label meaning, now closed) | **مصاب — injured/vet room** |
+| 2 | Service room size | `Requirments.txt` line 6: **3.00 x 3.00 m** (explicit written requirement) | `stable 1.pdf`: **6.00 x 3.00 m** (measured CAD) | **RESOLVED:** owner confirmed 6.00 x 3.00 m governs, superseding the written brief; the wing band was reflowed (WK01/WBTH01 narrowed) to fit it | High (both readings clear; now closed) | **6.00 x 3.00 m** |
+| 3 | Outdoor majlis / private bathroom width | `stable 1.pdf`: depth dimensioned, width not clearly legible at scan resolution | — | **RESOLVED:** owner confirmed both as modeled — outdoor majlis mirrors the indoor majlis (8.00 m); private bathroom matches the bedroom width above it (4.83 m) | Medium | **Confirm current values** |
+| 4 | Worker housing proportions | `stable 1.pdf`: single narrow block, 4.74 x 13.66 m overall | — | Redesign reflows the same combined area into a shallower, wider 3-room wing (bedroom/kitchen/bath) aligned with the feed/service wing — same function, improved proportions. Owner confirmed the WB01 (bedroom) footprint/bunk layout as modeled; WK01/WBTH01 were subsequently narrowed to fit the SV01 decision above (item 2) | N/A (deliberate improvement) | **WB01 confirmed; WK01/WBTH01 narrowed as a disclosed consequence of item 2** |
+| 5 | Paddock sizing | `stable 1.pdf`: unequal, ~150 m² and ~225 m² | — | Redesign makes both paddocks equal at {{PADDOCK_AREA}} m² each | N/A (deliberate improvement) | Not a conflict requiring owner input — an unambiguous improvement |
+| 6 | Parking apron | Not in `Requirments.txt` or `stable 1.pdf` | Present in render `...3.27.30 PM.jpeg` ("بركنج", ~4 cars) | **RESOLVED:** owner confirmed PK01 is kept exactly as modeled (11.00x4.00 m, 4 bays) | N/A | **Keep as-is** |
 
 ## 4. Required Program Checklist (source vs. delivered)
 
@@ -132,13 +138,13 @@ never given in any source file).
 | Site | 40.00 x 50.00 m | 40.00 x 50.00 m | ✅ |
 | Standard horse stalls | 20 @ 3.75x3.75m | 20 @ 3.75x3.75m (S01–S20) | ✅ |
 | Premium horse stalls | 2 @ 4.00x4.00m | 2 @ 4.00x4.00m (P01, P02) | ✅ |
-| Special horse rooms | 2, label unclear | 2 @ 3.50x4.00m (SP01, SP02), label UNCONFIRMED | ✅ (flagged) |
+| Veterinary/isolation rooms (مصاب) | 2, label unclear | 2 @ 3.50x4.00m (SP01, SP02), label CONFIRMED as مصاب | ✅ (resolved) |
 | Feed room | 1 @ 4.00x4.00m | 1 @ 4.00x4.00m (FD01) | ✅ |
 | Paddocks | 2 | 2 @ {{PADDOCK_AREA}} m² each, equal (PD01, PD02) | ✅ (+ improved) |
-| Service room | 1 @ 3.00x3.00m | 1 @ 3.00x3.00m (SV01); CAD 6x3 conflict noted | ✅ (flagged) |
+| Service room | 1 @ 3.00x3.00m per brief | 1 @ 6.00x3.00m (SV01); owner-confirmed per CAD | ✅ (resolved) |
 | Worker bedroom (4) | 1 | WB01, 7.00x4.00m = 28 m² | ✅ |
-| Worker bathroom | 1 | WBTH01, 3.00x4.00m = 12 m² | ✅ |
-| Worker kitchen | 1 | WK01, 4.50x4.00m = 18 m² | ✅ |
+| Worker bathroom | 1 | WBTH01, 2.00x4.00m = 8 m² | ✅ |
+| Worker kitchen | 1 | WK01, 3.50x4.00m = 14 m² | ✅ |
 | Men's majlis | 1 | MJ01, 8.00x8.24m = 65.92 m² | ✅ |
 | Men's WC | 1 | MWC01, 1.76x1.76m = 3.10 m² | ✅ |
 | Outdoor sitting | 1 | OSA01, 8.00x8.24m = 65.92 m² | ✅ |
@@ -146,20 +152,23 @@ never given in any source file).
 | Private bathroom | 1 | PBTH01, 4.83x2.00m = 9.66 m² | ✅ |
 | Parking (optional) | — | PK01, 11.00x4.00m, 4 bays | ✅ (optional, flagged) |
 
-## 5. Design Assumptions and Unresolved Questions
+## 5. Owner-Confirmed Decisions (Finalized This Pass)
 
-**Requires owner confirmation before final design lock:**
+All 5 items previously flagged as requiring owner input are now resolved:
 
-1. **Special room label/function** (SP01, SP02) — مصلب (breeding/covering) vs مصاب (injured/vet)?
-   These imply different fit-outs (breeding stocks/AI equipment vs. isolation ventilation/vet
-   drainage). Placement (isolated, near service, away from general stalls) works for either.
-2. **Service room size** — 3.00x3.00 m (per written brief, used as default) or 6.00x3.00 m (per
-   CAD)?
-3. **Outdoor majlis width** and **private bathroom width** — sized by redesign choice in the
-   absence of a fully legible source dimension; confirm or adjust.
-4. **Parking apron** — keep as shown (4 bays, 11x4m), resize, or omit? It appeared only in the
-   render, not in the written brief or the dimensioned CAD.
-5. **Worker bedroom bunk layout** for 4 workers within the reflowed 28 m² footprint.
+1. **Special room label/function** (SP01, SP02) — **CONFIRMED: مصاب (injured/veterinary-isolation
+   room)**, the reading shown in the rendered image. The CAD's alternate spelling "مصلب"
+   (breeding/covering) is superseded. Fit-out direction: isolation ventilation, washable/drainable
+   floor, dedicated exam lighting — subject to licensed MEP/veterinary-consultant review (§18).
+2. **Service room size** — **CONFIRMED: 6.00 x 3.00 m**, per the stable 1.pdf CAD, superseding the
+   3.00 x 3.00 m in Requirments.txt line 6. This required reflowing the wing band (WK01 and WBTH01
+   narrowed) — see §6 and §9.
+3. **Outdoor majlis width** and **private bathroom width** — **CONFIRMED as modeled**: 8.00 m and
+   4.83 m respectively, no change.
+4. **Parking apron** — **CONFIRMED: kept as-is** (4 bays, 11.00x4.00 m).
+5. **Worker bedroom bunk layout** — **CONFIRMED as modeled**: the 7.00x4.00 m (28 m²) footprint is
+   final; specific bunk/furniture arrangement for 4 workers is an interior fit-out detail for a
+   later design phase, not a geometry change.
 
 ## 6. Proposed Zoning Strategy
 
@@ -173,10 +182,13 @@ the 40.00 x 50.00 m boundary (see §11):
    working stable.
 4. **Stall Row A (Y15.24–18.99)** / **aisle (Y18.99–22.49)** / **Stall Row B (Y22.49–26.24):** the
    20 standard stalls in a double-loaded barn, aisle-facing, non-slip flooring, shaded canopy above.
-5. **Feed/service/premium/special/worker wing (Y26.24–30.24):** one unified roofline containing,
-   west to east: worker bedroom, kitchen, bathroom, then premium stall, special room, feed room,
-   service room, special room, premium stall — everything the stable needs day-to-day, one aisle
-   away from the horses, one wall away from the paddocks.
+5. **Feed/service/premium/veterinary/worker wing (Y26.24–30.24):** one unified roofline containing,
+   west to east: worker bedroom, kitchen, bathroom, then premium stall, veterinary/isolation room,
+   feed room, service room (6.00x3.00 m, owner-confirmed), veterinary/isolation room, premium stall
+   — everything the stable needs day-to-day, one aisle away from the horses, one wall away from the
+   paddocks. The worker kitchen and bathroom were narrowed this pass (to 3.50 m and 2.00 m
+   respectively) to fit the owner-confirmed 6.00 m-wide service room without changing any other
+   room's confirmed size.
 6. **Vestibule (Y30.24–31.24):** gated transition from the working wing to the paddock spine.
 7. **Paddocks + wash/manure spine (Y31.24–50.00):** two equal paddocks flanking a dedicated
    wash-down/manure/drainage service yard.
@@ -263,8 +275,9 @@ Both confirmed by `design/scripts/validate.py` (see §17) — script output: `x_
 ## 12. Circulation and Operations
 
 - **Horse circulation:** every stall opens directly onto the single shared central aisle; premium
-  and special stalls sit at the aisle's southern end, immediately adjacent to feed/service — no
-  horse ever needs to cross the guest zone or motor court.
+  stalls and the two veterinary/isolation rooms sit at the aisle's southern end, immediately
+  adjacent to feed/service — no horse ever needs to cross the guest zone or motor court, and the
+  isolation rooms are naturally separated from the general stall population.
 - **Service/feed circulation:** feed and service rooms are centered in the wing, equidistant from
   both stall rows; the perimeter fire/service lane lets a feed truck or farrier reach the wing or
   paddocks without touching the guest motor court.
@@ -343,6 +356,11 @@ trees are componentized and arrayed).
   model with a presentation style (Urban Planning preset, shadows on) and a luxury aerial camera
   angle — sufficient to verify massing, proportion, and adjacency, but not a photoreal marketing
   render. If a photoreal render is required, this .skp is ready to hand to Enscape/V-Ray/Twinmotion.
+- **Known gap (disclosed, not hidden):** this .skp was built before the owner-confirmation pass
+  that resized SV01 to 6.00x3.00 m and narrowed WK01/WBTH01 to fit it. The 3D model's wing massing
+  therefore reflects the pre-finalization geometry (SV01 still shown at 3.00x3.00 m) and should be
+  regenerated from the current `model.py` before being used as a final visual reference. The 2D
+  plans, DXF, CSVs, and this report are all current; only the .skp lags.
 
 ## 17. Validation Report
 
@@ -350,6 +368,8 @@ Full JSON/TXT reports: `design/output/reports/validation_report.json` / `.txt`. 
 directly from that JSON, not hand-typed):
 
 {{VALIDATION_SUMMARY}}
+
+{{RESOLVED_DECISIONS_LIST}}
 
 ## 18. Remaining Items Requiring Licensed Professional Review
 
@@ -361,8 +381,10 @@ directly from that JSON, not hand-typed):
 - Civil/drainage design for the paddocks, wash-down spine, and site-wide stormwater management.
 - Local building code, zoning, and agricultural/equestrian-use permitting compliance — none of
   which has been verified in this exercise.
-- Final confirmation of the two flagged Source Conflict Table items (§3) before any drawing is
-  advanced past concept.
+- The veterinary/isolation fit-out for SP01/SP02 (ventilation, drainage, exam lighting) still needs
+  a licensed veterinary/MEP consultant, even though the room function itself is now confirmed.
+- The 3D massing model (§16) needs to be regenerated to reflect the finalized SV01/WK01/WBTH01
+  geometry before being used as a visual reference.
 
 ## 19. Final Acceptance Checklist
 
@@ -394,8 +416,9 @@ directly from that JSON, not hand-typed):
 - [x] DXF marked as concept underlay only.
 - [x] Every drawing includes the concept-only disclaimer.
 - [x] No code/permitting compliance falsely claimed.
-- [ ] Owner confirmation still pending on the {{UNRESOLVED_COUNT}} flagged items in §5 before this
-      leaves "concept" status.
+- [x] Owner confirmation obtained on all {{UNRESOLVED_COUNT}} previously-flagged items in §5.
+- [ ] 3D massing model (§16) regenerated to match the finalized SV01/WK01/WBTH01 geometry (not yet
+      done this pass - the 2D plans/DXF/CSVs/report are current, the .skp lags).
 
 ## 20. Deliverables Index
 
@@ -426,6 +449,8 @@ design/
 source_files/
   Stable PROJECT/            - the 4 uploaded source files, unmodified
   stable1_page.png           - full-page reference render of stable 1.pdf, used during the source audit
+FINAL_QA_LOCK_REPORT.md      - area-discrepancy audit (prior pass)
+OWNER_CONFIRMATION_FINALIZATION_REPORT.md - this pass's owner-decision record
 ```
 
 3D model download (session-scoped, blocked from in-repo copy by this environment's network
